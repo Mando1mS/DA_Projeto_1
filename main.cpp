@@ -1,6 +1,13 @@
 #include <iostream>
+#include "CSV_reader.cpp"
 
 int main() {
-    std::cout << "Hello, World! " << std::endl;
+    vector<vector<string>> data = read_csv("network.csv");
+    for (const auto& row : data) {
+        for (const auto& value : row) {
+            cout << value << " ";
+        }
+        cout << endl;
+    }
     return 0;
 }
