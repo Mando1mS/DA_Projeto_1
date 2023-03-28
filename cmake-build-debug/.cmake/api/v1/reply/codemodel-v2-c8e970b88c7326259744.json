@@ -1,0 +1,69 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.22"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "DA_Projeto_1",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "DA_Projeto_1::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-DA_Projeto_1-Debug-27c6fdfb9eae2c17ddd9.json",
+					"name" : "DA_Projeto_1",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Doxygen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Doxygen-Debug-b468fc1e9640313a491e.json",
+					"name" : "Doxygen",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/edure/Desktop/Feup/2\u00ba Semestre/DA_Projeto_1/cmake-build-debug",
+		"source" : "C:/Users/edure/Desktop/Feup/2\u00ba Semestre/DA_Projeto_1"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 4
+	}
+}
