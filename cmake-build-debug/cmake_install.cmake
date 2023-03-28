@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/edure/Desktop/Feup/2º Semestre/DA_Projeto_1
+# Install script for directory: C:/Users/edure/Desktop/Feup/2_Semestre/DA_Projeto_1
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/edure/Desktop/Feup/2º Semestre/DA_Projeto_1/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/Users/edure/Desktop/Feup/2_Semestre/DA_Projeto_1/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

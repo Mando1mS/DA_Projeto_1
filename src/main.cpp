@@ -2,7 +2,7 @@
 #include "CSV_reader.cpp"
 
 int main() {
-    vector<vector<string>> data = read_csv("network.csv");
+    vector<vector<string>> data = csv_Reader("network.csv");
     for (const auto& row : data) {
         for (const auto& value : row) {
             cout << value << " ";

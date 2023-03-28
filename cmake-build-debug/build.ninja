@@ -39,7 +39,7 @@ include CMakeFiles/rules.ninja
 #############################################
 # Logical path to working directory; prefix for absolute paths.
 
-cmake_ninja_workdir = C$:/Users/edure/Desktop/Feup/2º$ Semestre/DA_Projeto_1/cmake-build-debug/
+cmake_ninja_workdir = C$:/Users/edure/Desktop/Feup/2_Semestre/DA_Projeto_1/cmake-build-debug/
 # =============================================================================
 # Object build statements for EXECUTABLE target DA_Projeto_1
 
@@ -49,19 +49,19 @@ cmake_ninja_workdir = C$:/Users/edure/Desktop/Feup/2º$ Semestre/DA_Projeto_1/cm
 
 build cmake_object_order_depends_target_DA_Projeto_1: phony || CMakeFiles/DA_Projeto_1.dir
 
-build CMakeFiles/DA_Projeto_1.dir/src/main.cpp.obj: CXX_COMPILER__DA_Projeto_1_Debug C$:/Users/edure/Desktop/Feup/2º$ Semestre/DA_Projeto_1/src/main.cpp || cmake_object_order_depends_target_DA_Projeto_1
+build CMakeFiles/DA_Projeto_1.dir/src/main.cpp.obj: CXX_COMPILER__DA_Projeto_1_Debug C$:/Users/edure/Desktop/Feup/2_Semestre/DA_Projeto_1/src/main.cpp || cmake_object_order_depends_target_DA_Projeto_1
   DEP_FILE = CMakeFiles\DA_Projeto_1.dir\src\main.cpp.obj.d
   FLAGS = -g -std=gnu++14
-  INCLUDES = -I"C:/Users/edure/Desktop/Feup/2º Semestre/DA_Projeto_1/DA_Projeto_1" -I/include
+  INCLUDES = -IC:/Users/edure/Desktop/Feup/2_Semestre/DA_Projeto_1/DA_Projeto_1 -I/include
   OBJECT_DIR = CMakeFiles\DA_Projeto_1.dir
   OBJECT_FILE_DIR = CMakeFiles\DA_Projeto_1.dir\src
   TARGET_COMPILE_PDB = CMakeFiles\DA_Projeto_1.dir\
   TARGET_PDB = DA_Projeto_1.pdb
 
-build CMakeFiles/DA_Projeto_1.dir/src/CSV_reader.cpp.obj: CXX_COMPILER__DA_Projeto_1_Debug C$:/Users/edure/Desktop/Feup/2º$ Semestre/DA_Projeto_1/src/CSV_reader.cpp || cmake_object_order_depends_target_DA_Projeto_1
+build CMakeFiles/DA_Projeto_1.dir/src/CSV_reader.cpp.obj: CXX_COMPILER__DA_Projeto_1_Debug C$:/Users/edure/Desktop/Feup/2_Semestre/DA_Projeto_1/src/CSV_reader.cpp || cmake_object_order_depends_target_DA_Projeto_1
   DEP_FILE = CMakeFiles\DA_Projeto_1.dir\src\CSV_reader.cpp.obj.d
   FLAGS = -g -std=gnu++14
-  INCLUDES = -I"C:/Users/edure/Desktop/Feup/2º Semestre/DA_Projeto_1/DA_Projeto_1" -I/include
+  INCLUDES = -IC:/Users/edure/Desktop/Feup/2_Semestre/DA_Projeto_1/DA_Projeto_1 -I/include
   OBJECT_DIR = CMakeFiles\DA_Projeto_1.dir
   OBJECT_FILE_DIR = CMakeFiles\DA_Projeto_1.dir\src
   TARGET_COMPILE_PDB = CMakeFiles\DA_Projeto_1.dir\
@@ -97,7 +97,7 @@ build Doxygen: phony CMakeFiles/Doxygen
 # Utility command for edit_cache
 
 build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D "C:\Users\edure\Desktop\Feup\2º Semestre\DA_Projeto_1\cmake-build-debug" && "D:\CLion 2022.2.4\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
+  COMMAND = cmd.exe /C "cd /D C:\Users\edure\Desktop\Feup\2_Semestre\DA_Projeto_1\cmake-build-debug && "D:\CLion 2022.2.4\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -108,7 +108,7 @@ build edit_cache: phony CMakeFiles/edit_cache.util
 # Utility command for rebuild_cache
 
 build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D "C:\Users\edure\Desktop\Feup\2º Semestre\DA_Projeto_1\cmake-build-debug" && "D:\CLion 2022.2.4\bin\cmake\win\bin\cmake.exe" --regenerate-during-build -S"C:\Users\edure\Desktop\Feup\2º Semestre\DA_Projeto_1" -B"C:\Users\edure\Desktop\Feup\2º Semestre\DA_Projeto_1\cmake-build-debug""
+  COMMAND = cmd.exe /C "cd /D C:\Users\edure\Desktop\Feup\2_Semestre\DA_Projeto_1\cmake-build-debug && "D:\CLion 2022.2.4\bin\cmake\win\bin\cmake.exe" --regenerate-during-build -SC:\Users\edure\Desktop\Feup\2_Semestre\DA_Projeto_1 -BC:\Users\edure\Desktop\Feup\2_Semestre\DA_Projeto_1\cmake-build-debug"
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -120,7 +120,7 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 # Custom command for CMakeFiles\Doxygen
 
 build CMakeFiles/Doxygen | ${cmake_ninja_workdir}CMakeFiles/Doxygen: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D "C:\Users\edure\Desktop\Feup\2º Semestre\DA_Projeto_1" && "C:\Program Files\doxygen\bin\doxygen.exe" "C:/Users/edure/Desktop/Feup/2º Semestre/DA_Projeto_1/Doxyfile""
+  COMMAND = cmd.exe /C "cd /D C:\Users\edure\Desktop\Feup\2_Semestre\DA_Projeto_1 && "C:\Program Files\doxygen\bin\doxygen.exe" C:/Users/edure/Desktop/Feup/2_Semestre/DA_Projeto_1/Doxyfile"
   DESC = Generating API documentation with Doxygen
 
 # =============================================================================
@@ -134,7 +134,7 @@ build DA_Projeto_1: phony DA_Projeto_1.exe
 # =============================================================================
 
 #############################################
-# Folder: C:/Users/edure/Desktop/Feup/2º Semestre/DA_Projeto_1/cmake-build-debug
+# Folder: C:/Users/edure/Desktop/Feup/2_Semestre/DA_Projeto_1/cmake-build-debug
 
 build all: phony DA_Projeto_1.exe Doxygen
 

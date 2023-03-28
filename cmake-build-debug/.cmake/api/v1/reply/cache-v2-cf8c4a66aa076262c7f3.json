@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "c:/Users/edure/Desktop/Feup/2\u00ba Semestre/DA_Projeto_1/cmake-build-debug"
+			"value" : "c:/Users/edure/Desktop/Feup/2_Semestre/DA_Projeto_1/cmake-build-debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -623,7 +623,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "C:/Users/edure/Desktop/Feup/2\u00ba Semestre/DA_Projeto_1"
+			"value" : "C:/Users/edure/Desktop/Feup/2_Semestre/DA_Projeto_1"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -1239,7 +1239,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/edure/Desktop/Feup/2\u00ba Semestre/DA_Projeto_1/cmake-build-debug"
+			"value" : "C:/Users/edure/Desktop/Feup/2_Semestre/DA_Projeto_1/cmake-build-debug"
 		},
 		{
 			"name" : "DA_Projeto_1_IS_TOP_LEVEL",
@@ -1263,7 +1263,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/edure/Desktop/Feup/2\u00ba Semestre/DA_Projeto_1"
+			"value" : "C:/Users/edure/Desktop/Feup/2_Semestre/DA_Projeto_1"
 		},
 		{
 			"name" : "DOXYGEN_DOT_EXECUTABLE",
