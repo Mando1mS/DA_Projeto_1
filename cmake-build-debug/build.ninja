@@ -70,6 +70,20 @@ build CMakeFiles/DA_Projeto_1.dir/src/Estacao.cpp.obj: CXX_COMPILER__DA_Projeto_
   OBJECT_DIR = CMakeFiles\DA_Projeto_1.dir
   OBJECT_FILE_DIR = CMakeFiles\DA_Projeto_1.dir\src
 
+build CMakeFiles/DA_Projeto_1.dir/src/Menu.cpp.obj: CXX_COMPILER__DA_Projeto_1_Debug C$:/Users/edure/Desktop/Feup/2_Semestre/DA_Projeto_1/src/Menu.cpp || cmake_object_order_depends_target_DA_Projeto_1
+  DEP_FILE = CMakeFiles\DA_Projeto_1.dir\src\Menu.cpp.obj.d
+  FLAGS = -g -std=gnu++14
+  INCLUDES = -IC:/Users/edure/Desktop/Feup/2_Semestre/DA_Projeto_1/DA_Projeto_1 -I/include
+  OBJECT_DIR = CMakeFiles\DA_Projeto_1.dir
+  OBJECT_FILE_DIR = CMakeFiles\DA_Projeto_1.dir\src
+
+build CMakeFiles/DA_Projeto_1.dir/src/Gestor.cpp.obj: CXX_COMPILER__DA_Projeto_1_Debug C$:/Users/edure/Desktop/Feup/2_Semestre/DA_Projeto_1/src/Gestor.cpp || cmake_object_order_depends_target_DA_Projeto_1
+  DEP_FILE = CMakeFiles\DA_Projeto_1.dir\src\Gestor.cpp.obj.d
+  FLAGS = -g -std=gnu++14
+  INCLUDES = -IC:/Users/edure/Desktop/Feup/2_Semestre/DA_Projeto_1/DA_Projeto_1 -I/include
+  OBJECT_DIR = CMakeFiles\DA_Projeto_1.dir
+  OBJECT_FILE_DIR = CMakeFiles\DA_Projeto_1.dir\src
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target DA_Projeto_1
@@ -78,7 +92,7 @@ build CMakeFiles/DA_Projeto_1.dir/src/Estacao.cpp.obj: CXX_COMPILER__DA_Projeto_
 #############################################
 # Link the executable DA_Projeto_1.exe
 
-build DA_Projeto_1.exe: CXX_EXECUTABLE_LINKER__DA_Projeto_1_Debug CMakeFiles/DA_Projeto_1.dir/src/main.cpp.obj CMakeFiles/DA_Projeto_1.dir/src/CSV_reader.cpp.obj CMakeFiles/DA_Projeto_1.dir/src/Estacao.cpp.obj
+build DA_Projeto_1.exe: CXX_EXECUTABLE_LINKER__DA_Projeto_1_Debug CMakeFiles/DA_Projeto_1.dir/src/main.cpp.obj CMakeFiles/DA_Projeto_1.dir/src/CSV_reader.cpp.obj CMakeFiles/DA_Projeto_1.dir/src/Estacao.cpp.obj CMakeFiles/DA_Projeto_1.dir/src/Menu.cpp.obj CMakeFiles/DA_Projeto_1.dir/src/Gestor.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\DA_Projeto_1.dir

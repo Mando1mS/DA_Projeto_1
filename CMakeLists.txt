@@ -4,7 +4,7 @@ project(DA_Projeto_1)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(DA_Projeto_1 src/main.cpp src/CSV_reader.cpp include/Estacao.h src/Estacao.cpp)
+add_executable(DA_Projeto_1 src/main.cpp src/CSV_reader.cpp include/Estacao.h src/Estacao.cpp include/Menu.h include/Gestor.h src/Menu.cpp src/Gestor.cpp)
 
 include_directories(DA_Projeto_1 /include)
 
