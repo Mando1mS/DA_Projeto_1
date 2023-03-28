@@ -1,13 +1,8 @@
 #include <iostream>
-#include "CSV_reader.cpp"
+#include "../include/Menu.h"
 
 int main() {
-    vector<vector<string>> data = csv_Reader("network.csv");
-    for (const auto& row : data) {
-        for (const auto& value : row) {
-            cout << value << " ";
-        }
-        cout << endl;
-    }
+    Menu menu= Menu();
+    menu.iniciarMenu();
     return 0;
 }

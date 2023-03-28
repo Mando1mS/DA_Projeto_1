@@ -9,9 +9,9 @@ void Menu::iniciarMenu() {
     while(true) {
         LimparTela();
         std::cout << "--------------------------------------------------------\n";
-        std::cout << "|      Bem vindo á gestão ferroviária de Portugal      |\n";
+        std::cout << "|      Bem vindo a gestao ferroviaria de Portugal      |\n";
         std::cout << "|                                                      |\n";
-        std::cout << "| 1 - Opcao 1                                          |\n";
+        std::cout << "| 1 - Mostrar Estacoes                                 |\n";
         std::cout << "| 2 - Opcao 2                                          |\n";
         std::cout << "| 3 - Opcao 3                                          |\n";
         std::cout << "|                                                      |\n";
@@ -22,25 +22,22 @@ void Menu::iniciarMenu() {
 
         char opt;
         while(true) {
-            std::cout << "\nOption: ";
+            std::cout << "\nOpcao: ";
             std::cin >> opt;
             if(opt <= '3' && opt >= '0' || opt == '9')
                 break;
-            std::cout << "Not a valid option, please choose another.\n";
+            std::cout << "Opcao invalida, escolha outra.\n";
         }
 
         switch(opt) {
             case '1':
-                //inputFlights();
+                gestor_.MostrarEstacoes();
                 break;
             case '2':
-                //airportInfo();
                 break;
             case '3':
-                //airlineInfo();
                 break;
             case '9':
-                //settings();
                 break;
             default:
                 LimparTela();
@@ -48,7 +45,7 @@ void Menu::iniciarMenu() {
         }
     }
 }
-}
+
 
 void Menu::LimparTela() {
     std::cout << "\033[2J\033[1;1H";
