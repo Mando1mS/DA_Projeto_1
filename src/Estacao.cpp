@@ -1,7 +1,7 @@
 #include "../include/Estacao.h"
 
-Estacao::Estacao(const std::string nome, const std::string distrito, const std::string municipio,
-                 const std::string freguesia, const std::string linha):nome_(nome),distrito_(distrito),municipio_(municipio),freguesia_(freguesia),linha_(linha) {
+Estacao::Estacao(const std::string nome, const std::string distrito, const std::string concelho,
+                 const std::string localidade, const std::string linha):nome_(nome),distrito_(distrito),concelho_(concelho),localidade_(localidade),linha_(linha) {
 }
 
 std::string Estacao::getNome() const {
@@ -12,12 +12,12 @@ std::string Estacao::getDistrito() const {
     return distrito_;
 }
 
-std::string Estacao::getMunicipio() const {
-    return municipio_;
+std::string Estacao::getConcelho() const {
+    return concelho_;
 }
 
-std::string Estacao::getFreguesia() const {
-    return freguesia_;
+std::string Estacao::getLocalidade() const {
+    return localidade_;
 }
 
 std::string Estacao::getLinha() const {
