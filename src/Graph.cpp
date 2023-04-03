@@ -1,7 +1,8 @@
 
-#include "../include/Grafo.h"
 
+#include "../include/Graph.h"
 
+Graph::Graph() {}
 
 void Graph::setUnvisited() {
     for(auto &it: nodes) {

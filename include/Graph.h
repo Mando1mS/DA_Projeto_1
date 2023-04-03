@@ -1,6 +1,6 @@
 
-#ifndef DA_PROJETO_1_GRAFO_H
-#define DA_PROJETO_1_GRAFO_H
+#ifndef DA_PROJETO_1_GRAPH_H
+#define DA_PROJETO_1_GRAPH_H
 
 #include <iostream>
 #include <vector>
@@ -48,18 +48,9 @@ private:
          */
         bool visited;
     };
+
 public:
     Graph();
-    /**
-     * @brief A hash table containing the connection between the name of the station and its node.
-     * @details When searching the Time Complexity is O(1).
-     */
-    std::unordered_map<std::string, Node> nodes;
-    /**
-     * @brief Set of lines favoured by the client.
-     * @details Can be empty.
-     */
-    std::unordered_set<std::string> wanted_lines;
     /**
      * @brief Add a node to the Graph using the name of the station as a key and the whole "Estacao" class as the value.
      * @details Time Complexity - O(|V| + |E|).
@@ -78,9 +69,19 @@ public:
      * @param tipo Type of service used.
      */
     void addEdge(const std::string& source_estacao, const std::string& target_estacao,int cap, const std::string& tipo);
+    /**
+     * @brief A hash table containing the connection between the name of the station and its node.
+     * @details When searching the Time Complexity is O(1).
+     */
+    std::unordered_map<std::string, Node> nodes;
+    /**
+     * @brief Set of lines favoured by the client.
+     * @details Can be empty.
+     */
+    std::unordered_set<std::string> wanted_lines;
     void setUnvisited();
     int getNumEstacoes() const;
 };
 
 
-#endif //DA_PROJETO_1_GRAFO_H
+#endif //DA_PROJETO_1_GRAPH_H

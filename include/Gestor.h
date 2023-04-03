@@ -1,5 +1,5 @@
 #include "../include/Estacao.h"
-#include "../include/Grafo.h"
+#include "../include/Graph.h"
 #include <vector>
 
 #ifndef DA_PROJETO_1_GESTOR_H
@@ -8,7 +8,7 @@
 class Gestor
 {
 private:
-    std::vector<Estacao> testeVec_;
+    Graph* network_;
     void LerFicheiros();
 public:
     Gestor();
