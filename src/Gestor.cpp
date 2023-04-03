@@ -1,5 +1,6 @@
 #include "../include/Gestor.h"
 #include "../include/Estacao.h"
+#include "../include/Grafo.h"
 #include <fstream>
 #include <sstream>
 #include <iostream>

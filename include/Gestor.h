@@ -1,4 +1,5 @@
 #include "../include/Estacao.h"
+#include "../include/Grafo.h"
 #include <vector>
 
 #ifndef DA_PROJETO_1_GESTOR_H
