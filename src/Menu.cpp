@@ -12,7 +12,7 @@ void Menu::iniciarMenu() {
         std::cout << "|      Bem vindo a gestao ferroviaria de Portugal      |\n";
         std::cout << "|                                                      |\n";
         std::cout << "| 1 - Mostrar Estacoes                                 |\n";
-        std::cout << "| 2 - Opcao 2                                          |\n";
+        std::cout << "| 2 - Mostrar Network                                  |\n";
         std::cout << "| 3 - Opcao 3                                          |\n";
         std::cout << "|                                                      |\n";
         std::cout << "|                                                      |\n";
@@ -34,6 +34,7 @@ void Menu::iniciarMenu() {
                 gestor_.MostrarEstacoes();
                 break;
             case '2':
+                gestor_.MostrarNetwork();
                 break;
             case '3':
                 break;

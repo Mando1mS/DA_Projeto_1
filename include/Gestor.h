@@ -13,6 +13,7 @@ private:
 public:
     Gestor();
     void MostrarEstacoes();
+    void MostrarNetwork();
 
 };
 #endif //DA_PROJETO_1_GESTOR_H

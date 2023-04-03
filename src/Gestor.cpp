@@ -42,6 +42,7 @@ void Gestor::LerFicheiros() {
         getline(ss, tipo, '\r');
 
         network_->addEdge(source, target, std::stoi(cap),tipo);
+        network_->addEdge(target, source, std::stoi(cap),tipo);
     }
 
 }
@@ -50,5 +51,21 @@ void Gestor::MostrarEstacoes() {
     for(auto est:network_->nodes)
     {
         cout <<"Nome: " << est.second.estacao.getNome() << " Distrito: " << est.second.estacao.getDistrito() << "\n";
+    }
+}
+
+void Gestor::MostrarNetwork()
+{
+    for(auto est:network_->nodes)
+    {
+        auto u=est.second;
+        for(auto lig:u.adj)
+        {
+            cout <<"Nome source: " << u.estacao.getNome() << " Nome destino: " << lig.dest << "\n";
+        }
+    }
+    for(auto a: network_->nodes.at("Espinho").adj)
+    {
+        cout << a.dest << "\n";
     }
 }
