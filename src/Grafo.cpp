@@ -2,36 +2,28 @@
 #include "../include/Grafo.h"
 
 
-Estacao * Graph::findEstacao(const std::string &nome) const {
-    for (auto e : estacoes)
-        if (e->getNome() == nome)
-            return e;
-    return nullptr;
-}
 
-bool Graph::addEstacao(Estacao &e) {
-    if(findEstacao(e.getNome()) == nullptr) {
-        estacoes.push_back(&e);
-        return true;
+void Graph::setUnvisited() {
+    for(auto &it: nodes) {
+        it.second.visited = false;
     }
-    return false;
 }
 
-bool Graph::addLinha(const std::string &A, const std::string &B, int c) {
-    auto e1 = findEstacao(A);
-    auto e2 = findEstacao(B);
-    if (e1 == nullptr || e2 == nullptr)
-        return false;
-    e1->addLinha(e2, c);
-    e2->addLinha(e1, c);
-    return true;
+void Graph::addNode(const std::string &nome_estacao, const Estacao &estacao) {
+    nodes.insert({ nome_estacao, { estacao,{},false}});//n
 }
 
-std::vector<Estacao *> Graph::getEstacoes() const{
-    return estacoes;
+void Graph::addEdge(const std::string &source_estacao, const std::string &target_estacao,int cap,
+                    const std::string &tipo)
+{
+    auto source = nodes.find(source_estacao);
+    auto target = nodes.find(target_estacao);
+    if(source == nodes.end() || target == nodes.end() || source == target) return;
+    source->second.adj.push_back({target_estacao,tipo,cap});
 }
+
 
 int Graph::getNumEstacoes() const{
-    return estacoes.size();
+    return nodes.size();
 }
 
