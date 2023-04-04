@@ -15,6 +15,8 @@
 
 #include "../include/Estacao.h"
 
+using namespace std;
+
 class Graph {
 private:
     struct Edge {
@@ -47,7 +49,12 @@ private:
          * @details This variable set to True means that the node has been visited and False otherwise.
          */
         bool visited;
+        /**
+         * @brief A list that stores another list with all the airports and airlines from the source all the way to the target node.
+         */
+        list<list<pair<Estacao,string>>> travel_from_src;
     };
+
 
 public:
     Graph();
@@ -79,6 +86,14 @@ public:
      * @details Can be empty.
      */
     std::unordered_set<std::string> wanted_lines;
+    /**
+     * @brief Function used to do a Breadth-First Search (aka BFS).
+     * @details Time Complexity - O(|V| + |E|).
+     * @details V is the number of vertices/nodes and E is the number of edges/links.
+     * @param airport_code Airport code to be searched.
+     */
+    void bfs(const std::string &nome_estacao);
+
     void setUnvisited();
     int getNumEstacoes() const;
 };
