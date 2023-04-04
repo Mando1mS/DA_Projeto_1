@@ -69,3 +69,22 @@ void Gestor::MostrarNetwork()
         cout << a.dest << "\n";
     }
 }
+
+void Gestor::testeBFS() {
+    network_->bfs("Vila Nova de Gaia-Devesas");
+    for(auto e:network_->nodes)
+    {
+        cout << "Nome da estacao: " << e.second.estacao.getNome() << " \n";
+        for(auto est: e.second.travel_from_src)
+        {
+            if(!est.empty())
+            {
+                for(auto est2: est)
+                {
+                    cout << est2.first.getNome() << "\n";
+                }
+            }
+        }
+
+    }
+}

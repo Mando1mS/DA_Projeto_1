@@ -14,6 +14,7 @@ public:
     Gestor();
     void MostrarEstacoes();
     void MostrarNetwork();
+    void testeBFS();
 
 };
 #endif //DA_PROJETO_1_GESTOR_H

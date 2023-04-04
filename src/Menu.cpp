@@ -13,7 +13,7 @@ void Menu::iniciarMenu() {
         std::cout << "|                                                      |\n";
         std::cout << "| 1 - Mostrar Estacoes                                 |\n";
         std::cout << "| 2 - Mostrar Network                                  |\n";
-        std::cout << "| 3 - Opcao 3                                          |\n";
+        std::cout << "| 3 - Teste Bfs                                        |\n";
         std::cout << "|                                                      |\n";
         std::cout << "|                                                      |\n";
         std::cout << "| 9 - Settings                                         |\n";
@@ -37,6 +37,7 @@ void Menu::iniciarMenu() {
                 gestor_.MostrarNetwork();
                 break;
             case '3':
+                gestor_.testeBFS();
                 break;
             case '9':
                 break;
