@@ -14,7 +14,7 @@ public:
     Gestor();
     void MostrarEstacoes();
     void MostrarNetwork();
-    void testeBFS();
+    void testeBFS(const string &nome_estacaoA,const string &nome_estacaoB);
 
 };
 #endif //DA_PROJETO_1_GESTOR_H

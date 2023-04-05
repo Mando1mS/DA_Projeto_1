@@ -70,18 +70,16 @@ void Gestor::MostrarNetwork()
     }
 }
 
-void Gestor::testeBFS() {
-    network_->bfs("Vila Nova de Gaia-Devesas");
-    for(auto e:network_->nodes)
+void Gestor::testeBFS(const string &nome_estacaoA,const string &nome_estacaoB) {
+    network_->bfs2p(nome_estacaoA,nome_estacaoB);
+    for(auto e:network_->shortestpaths_)
     {
-        cout << "Nome da estacao: " << e.second.estacao.getNome() << " \n";
-        for(auto est: e.second.travel_from_src)
+        for(auto e2:e)
         {
-            for(auto est2: est)
-                {
-                    cout << est2.first.getNome() << "\n";
-                }
+            cout << "Estacao: " << e2 << ". \n";
         }
-
+        cout <<"\n";
+        cout <<"\n";
+        cout << "Outro caminho... \n";
     }
 }

@@ -1,11 +1,14 @@
 #include "../include/Menu.h"
 #include "../include/Gestor.h"
 #include <iostream>
+#include <string>
 
 
 Menu::Menu():gestor_(Gestor()) {}
 
 void Menu::iniciarMenu() {
+    std::string s;
+    std::string t;
     while(true) {
         LimparTela();
         std::cout << "--------------------------------------------------------\n";
@@ -37,12 +40,11 @@ void Menu::iniciarMenu() {
                 gestor_.MostrarNetwork();
                 break;
             case '3':
-                int s, t;
-                cout << "Escolha a estação de partida: ";
-                cin >> s;
-                cout << "Escolha a estação final: ";
-                cin >> t;
-                gestor_.maxFlow(s, t);
+                //cout << "Escolha a estacao de partida: ";
+                //cin >> s;
+                //cout << "Escolha a estacao final: ";
+                //cin >> t;
+                gestor_.testeBFS("Vila Nova de Gaia-Devesas","Espinho");
                 break;
             case '9':
                 break;

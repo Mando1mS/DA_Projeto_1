@@ -7,9 +7,10 @@ Graph::Graph() {}
 void Graph::setUnvisited() {
     for(auto &it: nodes) {
         it.second.visited = false;
-        it.second.path= "";
+        it.second.path.clear();
         it.second.travel_from_src.clear();
     }
+    shortestpaths_.clear();
 }
 
 void Graph::addNode(const std::string &nome_estacao, const Estacao &estacao) {
@@ -79,7 +80,7 @@ void Graph::max_flow(const std::string &nome_estacaoA,const std::string &nome_es
     auto shortpath=nodes.at(nome_estacaoB).travel_from_src.size();
     setUnvisited();
 }
-void Graph::bfs2p(const std::string &nome_estacaoA)
+void Graph::bfs2p(const std::string &nome_estacaoA,const std::string &nome_estacaoB)
 {
     queue<string> q; // queue of unvisited nodes
     q.push(nome_estacaoA);
@@ -95,9 +96,26 @@ void Graph::bfs2p(const std::string &nome_estacaoA)
             auto newnode=u.dest;
             if(!nodes.at(newnode).visited)
             {
-                q.push(newnode);
-                nodes.at(newnode).visited=true;
-                nodes.at(newnode).path=node;
+                if(nodes.at(newnode).estacao.getNome()==nome_estacaoB)
+                {
+                    nodes.at(newnode).path.push_back(node);
+                    nodes.at(newnode).path.push_back(nome_estacaoB);
+                    nodes.at(newnode).visited=true;
+                    shortestpaths_.push_back(nodes.at(newnode).path);
+                }
+                else
+                {
+                    q.push(newnode);
+                    nodes.at(newnode).visited=true;
+                    nodes.at(newnode).path.push_back(node);
+                }
+            }
+            else {
+                if(nodes.at(newnode).estacao.getNome() == nome_estacaoB) {
+                    nodes.at(newnode).path.push_back(node);
+                    nodes.at(newnode).path.push_back(nome_estacaoB);
+                    shortestpaths_.push_back(nodes.at(newnode).path);
+                }
             }
         }
     }
