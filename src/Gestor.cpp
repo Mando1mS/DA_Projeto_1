@@ -77,13 +77,10 @@ void Gestor::testeBFS() {
         cout << "Nome da estacao: " << e.second.estacao.getNome() << " \n";
         for(auto est: e.second.travel_from_src)
         {
-            if(!est.empty())
-            {
-                for(auto est2: est)
+            for(auto est2: est)
                 {
                     cout << est2.first.getNome() << "\n";
                 }
-            }
         }
 
     }

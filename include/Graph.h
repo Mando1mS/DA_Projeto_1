@@ -53,6 +53,7 @@ private:
          * @brief A list that stores another list with all the airports and airlines from the source all the way to the target node.
          */
         list<list<pair<Estacao,string>>> travel_from_src;
+        string path;
     };
 
 
@@ -93,7 +94,8 @@ public:
      * @param airport_code Airport code to be searched.
      */
     void bfs(const std::string &nome_estacao);
-
+    void bfs2p(const std::string &nome_estacaoA);
+    void max_flow(const std::string &nome_estacaoA,const std::string &nome_estacaoB);
     void setUnvisited();
     int getNumEstacoes() const;
 };

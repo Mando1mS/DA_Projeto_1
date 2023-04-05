@@ -7,6 +7,7 @@ Graph::Graph() {}
 void Graph::setUnvisited() {
     for(auto &it: nodes) {
         it.second.visited = false;
+        it.second.path= "";
         it.second.travel_from_src.clear();
     }
 }
@@ -72,3 +73,32 @@ void Graph::bfs(const std::string &nome_estacao) {
     }
 }
 
+void Graph::max_flow(const std::string &nome_estacaoA,const std::string &nome_estacaoB)
+{
+    bfs(nome_estacaoA);
+    auto shortpath=nodes.at(nome_estacaoB).travel_from_src.size();
+    setUnvisited();
+}
+void Graph::bfs2p(const std::string &nome_estacaoA)
+{
+    queue<string> q; // queue of unvisited nodes
+    q.push(nome_estacaoA);
+    setUnvisited();
+    nodes.at(nome_estacaoA).visited = true;
+    while(!q.empty())
+    {
+        string node=q.front();
+        q.pop();
+        auto neighbour=nodes.at(node);
+        for(auto u:neighbour.adj)
+        {
+            auto newnode=u.dest;
+            if(!nodes.at(newnode).visited)
+            {
+                q.push(newnode);
+                nodes.at(newnode).visited=true;
+                nodes.at(newnode).path=node;
+            }
+        }
+    }
+}
