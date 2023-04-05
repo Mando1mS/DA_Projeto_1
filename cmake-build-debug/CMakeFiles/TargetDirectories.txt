@@ -1,4 +1,0 @@
-C:/Users/edure/Desktop/Feup/2_Semestre/DA_Projeto_1/cmake-build-debug/CMakeFiles/DA_Projeto_1.dir
-C:/Users/edure/Desktop/Feup/2_Semestre/DA_Projeto_1/cmake-build-debug/CMakeFiles/Doxygen.dir
-C:/Users/edure/Desktop/Feup/2_Semestre/DA_Projeto_1/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/edure/Desktop/Feup/2_Semestre/DA_Projeto_1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
