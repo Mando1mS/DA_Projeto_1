@@ -13,7 +13,7 @@ void Menu::iniciarMenu() {
         std::cout << "|                                                      |\n";
         std::cout << "| 1 - Mostrar Estacoes                                 |\n";
         std::cout << "| 2 - Mostrar Network                                  |\n";
-        std::cout << "| 3 - Teste Bfs                                        |\n";
+        std::cout << "| 3 - maxFlow                                          |\n";
         std::cout << "|                                                      |\n";
         std::cout << "|                                                      |\n";
         std::cout << "| 9 - Settings                                         |\n";
@@ -37,7 +37,12 @@ void Menu::iniciarMenu() {
                 gestor_.MostrarNetwork();
                 break;
             case '3':
-                gestor_.testeBFS();
+                int s, t;
+                cout << "Escolha a estação de partida: ";
+                cin >> s;
+                cout << "Escolha a estação final: ";
+                cin >> t;
+                gestor_.maxFlow(s, t);
                 break;
             case '9':
                 break;
