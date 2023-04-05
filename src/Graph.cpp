@@ -98,6 +98,10 @@ void Graph::bfs2p(const std::string &nome_estacaoA,const std::string &nome_estac
             {
                 if(nodes.at(newnode).estacao.getNome()==nome_estacaoB)
                 {
+                    for(auto str: nodes.at(node).path)
+                    {
+                        nodes.at(newnode).path.push_back(str);
+                    }
                     nodes.at(newnode).path.push_back(node);
                     nodes.at(newnode).path.push_back(nome_estacaoB);
                     nodes.at(newnode).visited=true;
@@ -106,12 +110,20 @@ void Graph::bfs2p(const std::string &nome_estacaoA,const std::string &nome_estac
                 else
                 {
                     q.push(newnode);
+                    for(auto str: nodes.at(node).path)
+                    {
+                        nodes.at(newnode).path.push_back(str);
+                    }
                     nodes.at(newnode).visited=true;
                     nodes.at(newnode).path.push_back(node);
                 }
             }
             else {
                 if(nodes.at(newnode).estacao.getNome() == nome_estacaoB) {
+                    for(auto str: nodes.at(node).path)
+                    {
+                        nodes.at(newnode).path.push_back(str);
+                    }
                     nodes.at(newnode).path.push_back(node);
                     nodes.at(newnode).path.push_back(nome_estacaoB);
                     shortestpaths_.push_back(nodes.at(newnode).path);
