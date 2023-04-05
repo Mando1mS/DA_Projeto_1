@@ -44,7 +44,7 @@ void Menu::iniciarMenu() {
                 //cin >> s;
                 //cout << "Escolha a estacao final: ";
                 //cin >> t;
-                gestor_.testeBFS("Vila Nova de Gaia-Devesas","Espinho");
+                gestor_.testeBFS("Espinho","Porto Campanhã");
                 break;
             case '9':
                 break;

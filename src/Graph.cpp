@@ -119,4 +119,19 @@ void Graph::bfs2p(const std::string &nome_estacaoA,const std::string &nome_estac
             }
         }
     }
+    int tam=500;
+    for(auto a : shortestpaths_)
+    {
+        if(tam>a.size())
+        {
+            tam=a.size();
+        }
+    }
+    for(auto &a : shortestpaths_)
+    {
+        if(a.size()!=tam)
+        {
+            a.erase(a.begin(),a.end());
+        }
+    }
 }

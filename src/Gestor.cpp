@@ -74,12 +74,16 @@ void Gestor::testeBFS(const string &nome_estacaoA,const string &nome_estacaoB) {
     network_->bfs2p(nome_estacaoA,nome_estacaoB);
     for(auto e:network_->shortestpaths_)
     {
-        for(auto e2:e)
+        if(e.size()!=0)
         {
-            cout << "Estacao: " << e2 << ". \n";
+            for(auto e2:e)
+            {
+                cout << "Estacao: " << e2 << ". \n";
+            }
+            cout << "Tamanho: " << e.size() << "\n";
+            cout <<"\n";
+            cout <<"\n";
+            cout << "Outro caminho... \n";
         }
-        cout <<"\n";
-        cout <<"\n";
-        cout << "Outro caminho... \n";
     }
 }
