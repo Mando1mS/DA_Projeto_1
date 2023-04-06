@@ -29,7 +29,7 @@ void Gestor::LerFicheiros() {
         getline(ss, linha, '\r');
 
         Estacao estacao= Estacao(nome,distrito, concelho,localidade,linha);
-        network_->addNode(nome,estacao);
+        network_->addNode(nome,estacao);//n
     }
     while(getline(network_input, line)) {
         std::stringstream ss(line);
