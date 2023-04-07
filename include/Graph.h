@@ -16,7 +16,9 @@
 #include "../include/Estacao.h"
 
 using namespace std;
-
+/**
+ * Represents a Graph.
+ */
 class Graph {
 private:
     struct Edge {
@@ -54,10 +56,13 @@ private:
          * @brief A list that stores another list with all the airports and airlines from the source all the way to the target node.
          */
         list<list<pair<Estacao,string>>> travel_from_src;
+        /**
+         * @brief Stores the path from the source node to the current node.
+         */
         string parent;
         vector<string> path;
     };
-    list<list<string>> shortestpaths_;
+
 public:
     Graph();
     /**
@@ -83,7 +88,6 @@ public:
      * @details When searching the Time Complexity is O(1).
      */
     std::unordered_map<std::string, Node> nodes;
-
     /**
      * @brief Set of lines favoured by the client.
      * @details Can be empty.
@@ -93,19 +97,41 @@ public:
      * @brief Function used to do a Breadth-First Search (aka BFS).
      * @details Time Complexity - O(|V| + |E|).
      * @details V is the number of vertices/nodes and E is the number of edges/links.
-     * @param airport_code Airport code to be searched.
+     * @param nome_estacao Name of the station.
      */
     void bfs(const std::string &nome_estacao);
-    void testAndVisit(std::queue<string> &q, Edge e, string w, int residual);
-    int findAugmentingPath(const std::string &nome_estacaoA,const std::string &nome_estacaoB);
-    int findMinResidualAlongPath(string s, string t);
-    void augmentFlowAlongPath(string s, string t, int f);
-    void edmondsKarp(string source, string target);
+    /**
+     * @brief A list that stores all the shortest paths between 2 stations.
+     */
+    list<list<string>> shortestpaths_;
+    /**
+     * @brief A alternative BFS to calculate the shortest paths between 2 stations.
+     * @details Time Complexity - O(|V^2| + |E|).
+     * @details V is the number of vertices/nodes and E is the number of edges/links.
+     * @param nome_estacaoA Name of the source station.
+     * @param nome_estacaoB Name of the destination station.
+     */
+    void bfs2p(const std::string &nome_estacaoA,const std::string &nome_estacaoB);
+    /**
+     * @brief Function used to do Edmonds-karp algorithm.
+     * @details Time Complexity - O(VE^2).
+     * @details V is the number of vertices/nodes and E is the number of edges/links.
+     * @param nome_estacaoA Name of the source station.
+     * @param nome_estacaoB Name of the destination station.
+     */
     int maxFlow(string source, string target);
+    /**
+     * @brief Clears some variables in the graph to help implement other functions.
+     * @details Clears every path from each node.
+     * @details Sets all nodes to unvisited
+     * @details Clears the list of the shortest paths.
+     */
     void setUnvisited();
-    const unordered_map<string, Node> getNodes() const;
+    /**
+     * Yields the number of stations.
+     * @return Number of stations present in the graph.
+     */
     int getNumEstacoes() const;
-    list<list<string>> getShortestpaths() const;
 };
 
 
