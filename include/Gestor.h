@@ -27,7 +27,7 @@ public:
     Gestor();
     void MostrarEstacoes();
     void MostrarNetwork();
-    void maxFlow();
-
+    int maxFlow(const string source,const string target);
+    list<pair<string,string>> topestacoes();
 };
 #endif //DA_PROJETO_1_GESTOR_H
