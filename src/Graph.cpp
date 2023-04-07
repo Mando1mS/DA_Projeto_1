@@ -31,10 +31,6 @@ int Graph::getNumEstacoes() const{
     return nodes.size();
 }
 
-list<list<string>> Graph::getShortestpaths() const {
-    return shortestpaths_;
-}
-
 void Graph::bfs(const std::string &nome_estacao) {
     setUnvisited();
 
