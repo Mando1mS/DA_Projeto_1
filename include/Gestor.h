@@ -14,7 +14,7 @@ public:
     Gestor();
     void MostrarEstacoes();
     void MostrarNetwork();
-    void testeBFS(const string &nome_estacaoA,const string &nome_estacaoB);
+    void maxFlow();
 
 };
 #endif //DA_PROJETO_1_GESTOR_H

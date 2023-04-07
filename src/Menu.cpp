@@ -40,13 +40,7 @@ void Menu::iniciarMenu() {
                 gestor_.MostrarNetwork();
                 break;
             case '3':
-                //cout << "Escolha a estacao de partida: ";
-                //cin >> s;
-                //cout << "Escolha a estacao final: ";
-                //cin >> t;
-                gestor_.testeBFS("Funcheira","Pinhal Novo");
-                gestor_.testeBFS("Porto Campanhã","Aguda");
-                gestor_.testeBFS("Espinho","Porto Campanhã");
+                gestor_.maxFlow();
                 break;
             case '9':
                 break;

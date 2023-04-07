@@ -3,6 +3,7 @@
 #include <fstream>
 #include <sstream>
 #include <iostream>
+#include <iomanip>
 
 using namespace std;
 
@@ -50,7 +51,7 @@ void Gestor::LerFicheiros() {
 void Gestor::MostrarEstacoes() {
     for(auto est:network_->nodes)
     {
-        cout <<"Nome: " << est.second.estacao.getNome() << " Distrito: " << est.second.estacao.getDistrito() << "\n";
+        cout << left << setw(6) << "Nome: " << setw(40) << est.second.estacao.getNome() << setw(10) << "Distrito: " << setw(30) << est.second.estacao.getDistrito() << "\n";
     }
 }
 
@@ -61,7 +62,7 @@ void Gestor::MostrarNetwork()
         auto u=est.second;
         for(auto lig:u.adj)
         {
-            cout <<"Nome source: " << u.estacao.getNome() << " Nome destino: " << lig.dest << "\n";
+            cout << left << setw(13) << "Nome source: " << setw(40) << u.estacao.getNome() << setw(13) << "Nome destino: " << setw(30) << lig.dest << "\n";
         }
     }
     for(auto a: network_->nodes.at("Espinho").adj)
@@ -70,20 +71,26 @@ void Gestor::MostrarNetwork()
     }
 }
 
-void Gestor::testeBFS(const string &nome_estacaoA,const string &nome_estacaoB) {
-    network_->bfs2p(nome_estacaoA,nome_estacaoB);
-    for(auto e:network_->shortestpaths_)
-    {
-        if(e.size()!=0)
-        {
-            for(auto e2:e)
-            {
-                cout << "Estacao: " << e2 << ". \n";
+void Gestor::maxFlow() {
+    string nome_estacaoA;
+    string nome_estacaoB;
+    int flowsum = 0;
+    cout << "Escolha a estacao de partida: ";
+    cin >> nome_estacaoA;
+    cout << "Escolha a estacao final: ";
+    cin >> nome_estacaoB;
+    cout << "Maximum flow between " << nome_estacaoA << " and " << nome_estacaoB << ": " << "\n";
+    cout << network_->maxFlow(nome_estacaoA, nome_estacaoB) << "\n";
+}
+    /*for(auto e:network_->getShortestpaths()) {
+        if(e.size()!=0) {
+            for(auto e2:e) {
+                cout << "\n" << "Estacao: " << setw(30) << e2 << " \x19 \n";
             }
             cout << "Tamanho: " << e.size() << "\n";
+            cout << "Maximum flow: " << flow << "\n";
             cout <<"\n";
             cout <<"\n";
             cout << "Outro caminho... \n";
         }
-    }
-}
+    }*/

@@ -34,6 +34,7 @@ private:
          * @details Number of simultaneously traveling trains in a line.
          */
         int cap;
+        int flow = 0;
     };
     struct Node {
         /**
@@ -53,9 +54,10 @@ private:
          * @brief A list that stores another list with all the airports and airlines from the source all the way to the target node.
          */
         list<list<pair<Estacao,string>>> travel_from_src;
-        list<string> path;
+        string parent;
+        vector<string> path;
     };
-
+    list<list<string>> shortestpaths_;
 public:
     Graph();
     /**
@@ -81,6 +83,7 @@ public:
      * @details When searching the Time Complexity is O(1).
      */
     std::unordered_map<std::string, Node> nodes;
+
     /**
      * @brief Set of lines favoured by the client.
      * @details Can be empty.
@@ -92,12 +95,17 @@ public:
      * @details V is the number of vertices/nodes and E is the number of edges/links.
      * @param airport_code Airport code to be searched.
      */
-    list<list<string>> shortestpaths_;
     void bfs(const std::string &nome_estacao);
-    void bfs2p(const std::string &nome_estacaoA,const std::string &nome_estacaoB);
-    void max_flow(const std::string &nome_estacaoA,const std::string &nome_estacaoB);
+    void testAndVisit(std::queue<string> &q, Edge e, string w, int residual);
+    int findAugmentingPath(const std::string &nome_estacaoA,const std::string &nome_estacaoB);
+    int findMinResidualAlongPath(string s, string t);
+    void augmentFlowAlongPath(string s, string t, int f);
+    void edmondsKarp(string source, string target);
+    int maxFlow(string source, string target);
     void setUnvisited();
+    const unordered_map<string, Node> getNodes() const;
     int getNumEstacoes() const;
+    list<list<string>> getShortestpaths() const;
 };
 
 

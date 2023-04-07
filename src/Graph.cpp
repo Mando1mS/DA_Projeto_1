@@ -31,6 +31,10 @@ int Graph::getNumEstacoes() const{
     return nodes.size();
 }
 
+list<list<string>> Graph::getShortestpaths() const {
+    return shortestpaths_;
+}
+
 void Graph::bfs(const std::string &nome_estacao) {
     setUnvisited();
 
@@ -74,76 +78,58 @@ void Graph::bfs(const std::string &nome_estacao) {
     }
 }
 
-void Graph::max_flow(const std::string &nome_estacaoA,const std::string &nome_estacaoB)
-{
-    bfs(nome_estacaoA);
-    auto shortpath=nodes.at(nome_estacaoB).travel_from_src.size();
+int Graph::maxFlow(string nome_estacaoA, string nome_estacaoB) {
+    queue<string> q;
     setUnvisited();
-}
-void Graph::bfs2p(const std::string &nome_estacaoA,const std::string &nome_estacaoB)
-{
-    queue<string> q; // queue of unvisited nodes
+    int maxflow = 0;
     q.push(nome_estacaoA);
-    setUnvisited();
-    nodes.at(nome_estacaoA).visited = true;
-    while(!q.empty())
-    {
-        string node=q.front();
+
+    while(!q.empty()) {
+        string node = q.front();
         q.pop();
-        auto neighbour=nodes.at(node);
-        for(auto u:neighbour.adj)
-        {
-            auto newnode=u.dest;
-            if(!nodes.at(newnode).visited)
-            {
-                if(nodes.at(newnode).estacao.getNome()==nome_estacaoB)
-                {
-                    for(auto str: nodes.at(node).path)
-                    {
-                        nodes.at(newnode).path.push_back(str);
+        auto neighbour= nodes.at(node);
+
+        for(auto u=neighbour.adj.begin(); u!=neighbour.adj.end(); u++) {
+            auto newnode=u->dest;
+            int res_cap = u->cap - u->flow;
+
+            if(!nodes.at(newnode).visited && res_cap > 0) {
+                int newflow = min(u->flow + res_cap, res_cap);  //compare initial flow
+                nodes.at(newnode).visited=true;
+                nodes.at(newnode).parent = node;
+
+                if(newnode == nome_estacaoB) {
+                    string cur = nome_estacaoB;
+                    while (cur != nome_estacaoA) {
+                        string parent = nodes.at(cur).parent;
+                        auto i = nodes.at(cur).adj.begin();
+                        while (i != nodes.at(cur).adj.end() && i->dest != parent) {
+                            i++;
+                        }
+                        if(i != nodes.at(cur).adj.end()) {
+                            i->flow += newflow;
+                        }
+                        i = nodes.at(parent).adj.begin();
+                        while (i != nodes.at(parent).adj.end() && i->dest != cur) {
+                            i++;
+                        }
+                        if(i != nodes.at(parent).adj.end()) {
+                            i->flow -= newflow;
+                        }
+                        cur = parent;
                     }
-                    nodes.at(newnode).path.push_back(node);
-                    nodes.at(newnode).path.push_back(nome_estacaoB);
-                    nodes.at(newnode).visited=true;
-                    shortestpaths_.push_back(nodes.at(newnode).path);
+                    maxflow += newflow;
+                    setUnvisited();
+                    q.push(nome_estacaoA);
+                    nodes.at(nome_estacaoA).visited = true;
+                    return maxflow;
                 }
-                else
-                {
+                else {
                     q.push(newnode);
-                    for(auto str: nodes.at(node).path)
-                    {
-                        nodes.at(newnode).path.push_back(str);
-                    }
-                    nodes.at(newnode).visited=true;
-                    nodes.at(newnode).path.push_back(node);
-                }
-            }
-            else {
-                if(nodes.at(newnode).estacao.getNome() == nome_estacaoB) {
-                    for(auto str: nodes.at(node).path)
-                    {
-                        nodes.at(newnode).path.push_back(str);
-                    }
-                    nodes.at(newnode).path.push_back(node);
-                    nodes.at(newnode).path.push_back(nome_estacaoB);
-                    shortestpaths_.push_back(nodes.at(newnode).path);
                 }
             }
         }
     }
-    int tam=500;
-    for(auto a : shortestpaths_)
-    {
-        if(tam>a.size())
-        {
-            tam=a.size();
-        }
-    }
-    for(auto &a : shortestpaths_)
-    {
-        if(a.size()!=tam)
-        {
-            a.erase(a.begin(),a.end());
-        }
-    }
+    return maxflow;
 }
+
