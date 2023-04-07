@@ -14,6 +14,7 @@ private:
      * @brief A pointer to the network graph which contains all info about the train network.
      */
     Graph* network_;
+    vector<District> distritos;
     /**
     * @brief Reads all the data saved in the files and stores them in the correct structures.
     * @details Time Complexity - O(n^3).

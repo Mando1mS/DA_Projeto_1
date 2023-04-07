@@ -5,6 +5,19 @@
 #include <string>
 #include "vector"
 
+
+class District{
+private:
+    std::string nome_dist;
+    int capacidade_total;
+public:
+    std::string getNome();
+    int getCapacidade();
+    void setNome(std::string n);
+    void setCapacidade(int n);
+    void updateCapacidade(int n);
+};
+
 /**
  * Represents a station.
  */
@@ -19,7 +32,7 @@ class Estacao
     /**
      * @brief District the station belongs to.
      */
-    std::string distrito_;
+    District distrito_;
     /**
      * @brief Municipality the station belongs to.
      */
@@ -43,7 +56,7 @@ class Estacao
      * @param localidade Township.
      * @param linha Line of network.
      */
-    Estacao(const std::string nome, const std::string distrito, const std::string concelho, const std::string localidade, const std::string linha);
+    Estacao(const std::string nome, const District distrito, const std::string concelho, const std::string localidade, const std::string linha);
     /**
      * @brief Gets the name of the station.
      * @return Station's name..
@@ -53,7 +66,7 @@ class Estacao
      * @brief Gets the name of the District the station belongs to.
      * @return District's name..
      */
-    std::string getDistrito() const;
+    District getDistrito() const;
     /**
      * @brief Gets the name of the Municipality the station belongs to.
      * @return Township's name..

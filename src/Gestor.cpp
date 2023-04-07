@@ -21,7 +21,7 @@ void Gestor::LerFicheiros() {
     while(getline(estacoes_input, line)) {//n^2
         std::stringstream ss(line);
 
-        std::string nome, distrito, concelho, localidade,linha;
+        std::string nome, distrito, concelho, localidade, linha;
 
         getline(ss, nome, ',');//n
         getline(ss, distrito, ',');
@@ -29,8 +29,24 @@ void Gestor::LerFicheiros() {
         getline(ss, localidade, ',');
         getline(ss, linha, '\r');
 
-        Estacao estacao= Estacao(nome,distrito, concelho,localidade,linha);
-        network_->addNode(nome,estacao);//n
+        District d;
+        Estacao estacao = Estacao(nome, d, concelho, localidade, linha);
+
+        bool found = false;
+        for (auto x: distritos) {
+            if (x.getNome() == distrito) {
+                estacao = Estacao(nome, x, concelho, localidade, linha);
+                found = true;
+                break;
+            }
+        }
+        if (!found) {
+            d.setCapacidade(0);
+            d.setNome(distrito);
+            distritos.push_back(d);
+            estacao = Estacao(nome, d, concelho, localidade, linha);
+        }
+        network_->addNode(nome, estacao);//n
     }
     while(getline(network_input, line)) {
         std::stringstream ss(line);
@@ -44,6 +60,7 @@ void Gestor::LerFicheiros() {
 
         network_->addEdge(source, target, std::stoi(cap),tipo);
         network_->addEdge(target, source, std::stoi(cap),tipo);
+        network_->nodes.at(source).estacao.getDistrito().updateCapacidade(std::stoi(cap));
     }
 
 }
@@ -51,7 +68,10 @@ void Gestor::LerFicheiros() {
 void Gestor::MostrarEstacoes() {
     for(auto est:network_->nodes)
     {
-        cout << left << setw(6) << "Nome: " << setw(40) << est.second.estacao.getNome() << setw(10) << "Distrito: " << setw(30) << est.second.estacao.getDistrito() << "\n";
+        cout << left << setw(6) << "Nome: " << setw(40) << est.second.estacao.getNome() << setw(10) << "Distrito: " << setw(30) << est.second.estacao.getDistrito().getNome() << "\n";
+    }
+    for(auto x:distritos){
+        cout << x.getNome() << "  " << x.getCapacidade() << "\n";
     }
 }
 
