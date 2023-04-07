@@ -21,6 +21,9 @@ public:
     /**
      * @brief Clears the current screen.
      */
-    void LimparTela();
+     void MenuMaximo();
+
+     void MaxFlow();
+     void TopEstacoes();
 };
 #endif //DA_PROJETO_1_MENU_H

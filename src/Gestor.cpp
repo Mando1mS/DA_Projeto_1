@@ -1,9 +1,11 @@
 #include "../include/Gestor.h"
 #include "../include/Estacao.h"
+#include "../include/Menu.h"
 #include <fstream>
 #include <sstream>
 #include <iostream>
 #include <iomanip>
+#include <set>
 
 using namespace std;
 
@@ -91,26 +93,39 @@ void Gestor::MostrarNetwork()
     }
 }
 
-void Gestor::maxFlow() {
-    string nome_estacaoA;
-    string nome_estacaoB;
-    int flowsum = 0;
-    cout << "Escolha a estacao de partida: ";
-    cin >> nome_estacaoA;
-    cout << "Escolha a estacao final: ";
-    cin >> nome_estacaoB;
-    cout << "Maximum flow between " << nome_estacaoA << " and " << nome_estacaoB << ": " << "\n";
-    cout << network_->maxFlow(nome_estacaoA, nome_estacaoB) << "\n";
+int Gestor::maxFlow(const string source,const string target) {
+    return network_->maxFlow(source,target);
 }
-    /*for(auto e:network_->getShortestpaths()) {
-        if(e.size()!=0) {
-            for(auto e2:e) {
-                cout << "\n" << "Estacao: " << setw(30) << e2 << " \x19 \n";
+
+list<pair<string,string>> Gestor::topestacoes()
+{
+    list<pair<string,string>> res;
+    unordered_map<int,pair<string,string>> lista;
+    set<int> keys;
+    for(auto est1: network_->nodes)
+    {
+        for(auto est2: network_->nodes)
+        {
+            if(est1.first!=est2.first)
+            {
+                auto a =network_->maxFlow(est1.first,est2.first);
+                lista.insert({a,{est1.first,est2.first}});
             }
-            cout << "Tamanho: " << e.size() << "\n";
-            cout << "Maximum flow: " << flow << "\n";
-            cout <<"\n";
-            cout <<"\n";
-            cout << "Outro caminho... \n";
         }
-    }*/
+    }
+    for(auto&it:lista)
+    {
+        keys.insert(it.first);
+    }
+    int c=0;
+    for(auto& it:keys)
+    {
+        res.push_back({lista[it].first,lista[it].second});
+        c++;
+        if(c==4)
+        {
+            break;
+        }
+    }
+    return res;
+}
