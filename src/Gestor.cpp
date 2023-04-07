@@ -53,27 +53,27 @@ void Gestor::LerFicheiros() {
     while(getline(network_input, line)) {
         std::stringstream ss(line);
 
-        std::string source, target,cap, tipo;
+        std::string source, target, cap, tipo;
 
         getline(ss, source, ',');
         getline(ss, target, ',');
         getline(ss, cap, ',');
         getline(ss, tipo, '\r');
 
-        network_->addEdge(source, target, std::stoi(cap),tipo);
-        network_->addEdge(target, source, std::stoi(cap),tipo);
-        network_->nodes.at(source).estacao.getDistrito().updateCapacidade(std::stoi(cap));
+        network_->addEdge(source, target, std::stoi(cap), tipo);
+        network_->addEdge(target, source, std::stoi(cap), tipo);
+        for (auto itr=distritos.begin(); itr!=distritos.end(); itr++) {
+            if (itr->getNome() == network_->nodes.at(source).estacao.getDistrito().getNome()) {
+                itr->updateCapacidade(std::stoi(cap));
+            }
+        }
     }
-
 }
 
 void Gestor::MostrarEstacoes() {
     for(auto est:network_->nodes)
     {
         cout << left << setw(6) << "Nome: " << setw(40) << est.second.estacao.getNome() << setw(10) << "Distrito: " << setw(30) << est.second.estacao.getDistrito().getNome() << "\n";
-    }
-    for(auto x:distritos){
-        cout << x.getNome() << "  " << x.getCapacidade() << "\n";
     }
 }
 
@@ -90,6 +90,10 @@ void Gestor::MostrarNetwork()
     for(auto a: network_->nodes.at("Espinho").adj)
     {
         cout << a.dest << "\n";
+    }
+
+    for(auto x:distritos){
+        cout << x.getNome() << "  " << x.getCapacidade() << "\n";
     }
 }
 
