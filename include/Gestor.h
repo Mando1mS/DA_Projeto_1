@@ -59,5 +59,12 @@ public:
      * @return List of pairs of stations.
      */
     list<pair<string,string>> topestacoes();
+    /**
+     * @brief Displays the "n" number of districts with the most transportation needs.
+     * @details Time Complexity - O(Nlog(N))
+     * @details N is the number of districts.
+     * @param n Number of districts to analyze.
+     */
+    void TransNeeds();
 };
 #endif //DA_PROJETO_1_GESTOR_H

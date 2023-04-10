@@ -38,5 +38,9 @@ public:
       * @brief Initializes the menu for the station and network printer.
       */
       void MenuViz();
+      /**
+       * @brief Initializes the menu for the transportation needs.
+       */
+      void MenuNeeds();
 };
 #endif //DA_PROJETO_1_MENU_H

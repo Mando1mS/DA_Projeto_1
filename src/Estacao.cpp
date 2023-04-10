@@ -48,3 +48,8 @@ void District::setCapacidade(int n) {
 void District::updateCapacidade(int n) {
     capacidade_total+=n;
 }
+
+bool District::operator<(const District &dist)
+{
+    return capacidade_total>dist.capacidade_total;
+}

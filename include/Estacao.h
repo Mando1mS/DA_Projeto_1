@@ -45,6 +45,13 @@ public:
      * @param n Capacity to be added.
      */
     void updateCapacidade(int n);
+    /**
+     * @brief Compares the equality between two districts.
+     * @param dist District to be compared.
+     * @return True- If dist's capacity is higher.
+     * @return False- If dist's capacity is lower.
+     */
+    bool operator<(const District &dist);
 };
 
 /**

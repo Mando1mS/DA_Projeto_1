@@ -12,7 +12,7 @@ void Menu::iniciarMenu() {
         std::cout << "|                                                      |\n";
         std::cout << "| 1 - Numero maximo de comboios                        |\n";
         std::cout << "| 2 - Vizualizar Rede                                  |\n";
-        std::cout << "| 3 - maxFlow                                          |\n";
+        std::cout << "| 3 - Transportation needs                             |\n";
         std::cout << "|                                                      |\n";
         std::cout << "|                                                      |\n";
         std::cout << "| 9 - Settings                                         |\n";
@@ -36,6 +36,7 @@ void Menu::iniciarMenu() {
                 MenuViz();
                 break;
             case '3':
+                MenuNeeds();
                 break;
             case '9':
                 break;
@@ -184,7 +185,7 @@ void Menu::TopEstacoes() {
 void Menu::MenuViz() {
     while (true) {
         std::cout << "--------------------------------------------------------\n";
-        std::cout << "|            Vizualizar Rede                           |\n";
+        std::cout << "|                    Vizualizar Rede                   |\n";
         std::cout << "|                                                      |\n";
         std::cout << "| 1 - Mostrar estacoes                                 |\n";
         std::cout << "| 2 - Mostrar network                                  |\n";
@@ -220,4 +221,44 @@ void Menu::MenuViz() {
                 return;
         }
     }
+}
+
+void Menu::MenuNeeds() {
+    while (true) {
+        std::cout << "--------------------------------------------------------\n";
+        std::cout << "|                    Transportation needs              |\n";
+        std::cout << "|                                                      |\n";
+        std::cout << "| 1 - Districts                                        |\n";
+        std::cout << "|                                                      |\n";
+        std::cout << "|                                                      |\n";
+        std::cout << "|                                                      |\n";
+        std::cout << "| 9 - Go back                                          |\n";
+        std::cout << "| 0 - Exit                                             |\n";
+        std::cout << "--------------------------------------------------------\n";
+
+        char opt;
+        while (true) {
+            std::cout << "\nOpcao: ";
+            std::cin >> opt;
+            if (opt <= '2' && opt >= '0' || opt == '9')
+                break;
+            std::cout << "Opcao invalida, escolha outra.\n";
+        }
+
+        switch (opt) {
+            case '1':
+                gestor_.TransNeeds();
+                MenuNeeds();
+                break;
+            case '2':
+                break;
+            case '9':
+                iniciarMenu();
+                break;
+            case '0':
+                exit(3);
+                return;
+        }
+    }
+
 }

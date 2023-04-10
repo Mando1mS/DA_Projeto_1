@@ -141,3 +141,22 @@ list<pair<string,string>> Gestor::topestacoes()
     }
     return res;
 }
+
+void Gestor::TransNeeds() {
+    int n;
+    cout << "Insere o numero total de distritos para vizualizar: ";
+    cin >> n;
+    cout << "\n";
+    if(n>=1 && n <=18)
+    {
+        std::sort(distritos.begin(),distritos.end());
+        for(int i=0;i<n;i++) {
+            cout << "Distrito numero " << i << " - " << distritos[i].getNome() << " com capacidade total: "
+                 << distritos[i].getCapacidade() << "\n";
+        }
+    }
+    else
+    {
+        cout << "Nao existe mais que 18 distritos em Portugal. \n";
+    }
+}
