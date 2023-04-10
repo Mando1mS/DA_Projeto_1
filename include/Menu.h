@@ -19,11 +19,24 @@ public:
      */
     void iniciarMenu();
     /**
-     * @brief Clears the current screen.
+     * @brief Initializes the max trains' menu.
      */
      void MenuMaximo();
+     /**
+      * @brief Opens the user-interface to calculate the maximum amount of trains that travel into a single station.
+      */
      void MaxToStation();
+     /**
+      * @brief Opens the user-interface to calculate the maximum amount of trains that travel between 2 stations.
+      */
      void MaxFlow();
+     /**
+      * @brief Opens the user-interface to print the top4 stations with most trains traveling simultaneously.
+      */
      void TopEstacoes();
+     /**
+      * @brief Initializes the menu for the station and network printer.
+      */
+      void MenuViz();
 };
 #endif //DA_PROJETO_1_MENU_H

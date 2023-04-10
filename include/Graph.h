@@ -36,6 +36,10 @@ private:
          * @details Number of simultaneously traveling trains in a line.
          */
         int cap;
+        /**
+         * @brief Current flow of the line.
+         * @details Maximum amount of trains that can travel in this line.
+         */
         int flow = 0;
     };
     struct Node {
@@ -53,13 +57,16 @@ private:
          */
         bool visited;
         /**
-         * @brief A list that stores another list with all the airports and airlines from the source all the way to the target node.
+         * @brief A list that stores another list with all the stations and services from the source all the way to the target node.
          */
         list<list<pair<Estacao,string>>> travel_from_src;
         /**
-         * @brief Stores the path from the source node to the current node.
+         * @brief Stores the parent node of the child node.
          */
         string parent;
+        /**
+         * @brief Stores the path from the source node to the current node.
+         */
         vector<string> path;
     };
 

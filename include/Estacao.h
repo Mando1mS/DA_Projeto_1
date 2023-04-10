@@ -5,16 +5,45 @@
 #include <string>
 #include "vector"
 
-
+/**
+ * Represents a District.
+ */
 class District{
 private:
+    /**
+     * @brief Name of the district.
+     */
     std::string nome_dist;
+    /**
+     * @brief Total capacity.
+     * @details Total amount of trains that travel simultaneously in that district.
+     */
     int capacidade_total;
 public:
+    /**
+     * @brief Gets the name of the district.
+     * @return The district's name.
+     */
     std::string getNome();
+    /**
+     * @brief Gets the total capacity.
+     * @return Maximum amount of trains simultaneously traveling in a district.
+     */
     int getCapacidade();
+    /**
+     * @brief Sets the name of the district.
+     * @param n The district's name.
+     */
     void setNome(std::string n);
+    /**
+     * @brief Sets the total capacity.
+     * @param n Capacity to be set.
+     */
     void setCapacidade(int n);
+    /**
+     * @brief Updates the current district capacity.
+     * @param n Capacity to be added.
+     */
     void updateCapacidade(int n);
 };
 
