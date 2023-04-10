@@ -44,7 +44,13 @@ public:
        * @brief Initializes the menu for the transportation needs.
        */
       void MenuNeeds();
+      /**
+       * @brief Opens the settings menu.
+       */
       void Settings();
+      /**
+       * @brief Opens the user-interface to change which line to read.
+       */
       void MudarLinha();
 };
 #endif //DA_PROJETO_1_MENU_H
