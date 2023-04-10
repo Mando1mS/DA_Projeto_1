@@ -4,7 +4,7 @@
 #include <string>
 
 
-Menu::Menu():gestor_(Gestor()) {}
+Menu::Menu():gestor_(Gestor("Todos")) {}
 void Menu::iniciarMenu() {
     while(true) {
         std::cout << "--------------------------------------------------------\n";
@@ -39,6 +39,7 @@ void Menu::iniciarMenu() {
                 MenuNeeds();
                 break;
             case '9':
+                Settings();
                 break;
             case '0':
                 exit(3);
@@ -155,6 +156,7 @@ void Menu::MaxToStation() {
 }
 
 void Menu::TopEstacoes() {
+    cout << "Calculando... \n";
     auto lista =gestor_.topestacoes();
     int cont=1;
     for(auto est:lista)
@@ -262,4 +264,61 @@ void Menu::MenuNeeds() {
                 return;
         }
     }
+
 }
+
+
+
+
+void Menu::Settings() {
+    while(true) {
+        std::cout << "--------------------------------------------------------\n";
+        std::cout << "|            Numero maximo de comboios                 |\n";
+        std::cout << "|                                                      |\n";
+        std::cout << "|                                                      |\n";
+        std::cout << "|  1-Ver linha em especifico                           |\n";
+        std::cout << "|  2-Reset                                             |\n";
+        std::cout << "|                                                      |\n";
+        std::cout << "|                                                      |\n";
+        std::cout << "| 9 - Go back                                          |\n";
+        std::cout << "| 0 - Exit                                             |\n";
+        std::cout << "--------------------------------------------------------\n";
+
+        char opt;
+        while(true) {
+            std::cout << "\nOpcao: ";
+            std::cin >> opt;
+            if(opt <= '2' && opt >= '0' || opt == '9')
+                break;
+            std::cout << "Opcao invalida, escolha outra.\n";
+        }
+
+        switch(opt) {
+            case '1':
+                MudarLinha();
+                iniciarMenu();
+                break;
+            case '2':
+                gestor_=Gestor("Todos");
+                break;
+            case '9':
+                iniciarMenu();
+                break;
+            case '0':
+                exit(3);
+                return;
+        }
+    }
+
+}
+
+void Menu::MudarLinha()
+{
+    string linha;
+    cout << "Introduza a linha: \n";
+    cin.ignore();
+    getline(cin,linha);
+    cout << "\n";
+    gestor_=Gestor(linha);
+}
+

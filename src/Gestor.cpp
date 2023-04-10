@@ -9,11 +9,11 @@
 
 using namespace std;
 
-Gestor::Gestor() {
+Gestor::Gestor(string linha) {
     network_=new Graph();
-    LerFicheiros();
+    LerFicheiros(linha);
 }
-void Gestor::LerFicheiros() {
+void Gestor::LerFicheiros(std::string linha2) {
     std::ifstream estacoes_input("../data/stations.csv");
     std::ifstream network_input("../data/network.csv");
     std::string line;
@@ -30,32 +30,64 @@ void Gestor::LerFicheiros() {
         getline(ss, concelho, ',');
         getline(ss, localidade, ',');
         getline(ss, linha, '\r');
-
         District d;
         Municipality m;
-        m.Mun_setNome(concelho);
-        m.Mun_setCapacidade(0);
-        if(!std::count(municip.begin(), municip.end(), m))
+        if(linha2=="Todos")
         {
-            municip.push_back(m);
-        }
-        Estacao estacao = Estacao(nome, d, m, localidade, linha);
 
-        bool found = false;
-        for (auto x: distritos) {
-            if (x.getNome() == distrito) {
-                estacao = Estacao(nome, x, m, localidade, linha);
-                found = true;
-                break;
+            m.Mun_setNome(concelho);
+            m.Mun_setCapacidade(0);
+            if(!std::count(municip.begin(), municip.end(), m))
+            {
+                municip.push_back(m);
+            }
+            Estacao estacao = Estacao(nome, d, m, localidade, linha);
+
+            bool found = false;
+            for (auto x: distritos) {
+                if (x.getNome() == distrito) {
+                    estacao = Estacao(nome, x, m, localidade, linha);
+                    found = true;
+                    break;
+                }
+            }
+            if (!found) {
+                d.setCapacidade(0);
+                d.setNome(distrito);
+                distritos.push_back(d);
+                estacao = Estacao(nome, d, m, localidade, linha);
+            }
+            network_->addNode(nome, estacao);//n
+        }
+        else
+        {
+            if(linha2==linha)
+            {
+                m.Mun_setNome(concelho);
+                m.Mun_setCapacidade(0);
+                if(!std::count(municip.begin(), municip.end(), m))
+                {
+                    municip.push_back(m);
+                }
+                Estacao estacao = Estacao(nome, d, m, localidade, linha);
+
+                bool found = false;
+                for (auto x: distritos) {
+                    if (x.getNome() == distrito) {
+                        estacao = Estacao(nome, x, m, localidade, linha);
+                        found = true;
+                        break;
+                    }
+                }
+                if (!found) {
+                    d.setCapacidade(0);
+                    d.setNome(distrito);
+                    distritos.push_back(d);
+                    estacao = Estacao(nome, d, m, localidade, linha);
+                }
+                network_->addNode(nome, estacao);//n
             }
         }
-        if (!found) {
-            d.setCapacidade(0);
-            d.setNome(distrito);
-            distritos.push_back(d);
-            estacao = Estacao(nome, d, m, localidade, linha);
-        }
-        network_->addNode(nome, estacao);//n
     }
     while(getline(network_input, line)) {
         std::stringstream ss(line);
@@ -66,17 +98,19 @@ void Gestor::LerFicheiros() {
         getline(ss, target, ',');
         getline(ss, cap, ',');
         getline(ss, tipo, '\r');
-
-        network_->addEdge(source, target, std::stoi(cap), tipo);
-        network_->addEdge(target, source, std::stoi(cap), tipo);
-        for (auto itr=distritos.begin(); itr!=distritos.end(); itr++) {
-            if (itr->getNome() == network_->nodes.at(source).estacao.getDistrito().getNome()) {
-                itr->updateCapacidade(std::stoi(cap));
+        if(network_->nodes.find(source)!=network_->nodes.end() && network_->nodes.find(target)!=network_->nodes.end() )
+        {
+            network_->addEdge(source, target, std::stoi(cap), tipo);
+            network_->addEdge(target, source, std::stoi(cap), tipo);
+            for (auto itr=distritos.begin(); itr!=distritos.end(); itr++) {
+                if (itr->getNome() == network_->nodes.at(source).estacao.getDistrito().getNome()) {
+                    itr->updateCapacidade(std::stoi(cap));
+                }
             }
-        }
-        for (auto itr=municip.begin(); itr!=municip.end(); itr++) {
-            if (itr->Mun_getNome() == network_->nodes.at(source).estacao.getConcelho().Mun_getNome()) {
-                itr->Mun_updateCapacidade(std::stoi(cap));
+            for (auto itr=municip.begin(); itr!=municip.end(); itr++) {
+                if (itr->Mun_getNome() == network_->nodes.at(source).estacao.getConcelho().Mun_getNome()) {
+                    itr->Mun_updateCapacidade(std::stoi(cap));
+                }
             }
         }
     }

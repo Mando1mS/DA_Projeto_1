@@ -26,13 +26,13 @@ private:
     * @brief Reads all the data saved in the files and stores them in the correct structures.
     * @details Time Complexity - O(n^3).
     */
-    void LerFicheiros();
+    void LerFicheiros(std::string linha);
 public:
     /**
      * @brief Creates a new manager.
      * @details Constructor of the "Gestor" class.
      */
-    Gestor();
+    Gestor(string linha);
     /**
      * @brief Prints all of the stored stations.
      */
