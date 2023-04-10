@@ -6,7 +6,7 @@
 #include "vector"
 
 /**
- * Represents a District.
+ * @brief Represents a District.
  */
 class District{
 private:
@@ -57,7 +57,7 @@ public:
 };
 
 /**
- * Represents a District.
+ * @brief Represents a District.
  */
 class Municipality{
 private:
@@ -113,7 +113,7 @@ public:
 };
 
 /**
- * Represents a station.
+ * @brief Represents a station.
  */
 class Estacao
 {
