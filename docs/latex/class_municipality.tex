@@ -1,0 +1,172 @@
+\hypertarget{class_municipality}{}\doxysection{Municipality Class Reference}
+\label{class_municipality}\index{Municipality@{Municipality}}
+
+
+Represents a \mbox{\hyperlink{class_district}{District}}.  
+
+
+
+
+{\ttfamily \#include $<$Estacao.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{class_municipality_afd819e571da6a33fcde3cbcbe659a432}{Mun\+\_\+get\+Nome}} ()
+\begin{DoxyCompactList}\small\item\em Gets the name of the municipality. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_municipality_ae982b2ded58ea17dc778b33652e7efe6}{Mun\+\_\+get\+Capacidade}} ()
+\begin{DoxyCompactList}\small\item\em Gets the total capacity. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_municipality_ab1148e3ff771441cae08a5dd3c1026b2}{Mun\+\_\+set\+Nome}} (std\+::string n)
+\begin{DoxyCompactList}\small\item\em Sets the name of the municipality. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_municipality_a8076fd5da222f6c6c76a3910d74ef5e9}{Mun\+\_\+set\+Capacidade}} (int n)
+\begin{DoxyCompactList}\small\item\em Sets the total municipality. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_municipality_afceb12b7db973850b81869f6fed29218}{Mun\+\_\+update\+Capacidade}} (int n)
+\begin{DoxyCompactList}\small\item\em Updates the current district municipality. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_municipality_a248912804208ea9543c7430ce5b23b8c}{operator$<$}} (const \mbox{\hyperlink{class_municipality}{Municipality}} \&mun)
+\begin{DoxyCompactList}\small\item\em Compares the equality between two municipalities. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_municipality_a8a9095b27cc8b063d1e8bfd64d37a21c}{operator==}} (const \mbox{\hyperlink{class_municipality}{Municipality}} \&mun)
+\begin{DoxyCompactList}\small\item\em Compares the equality between two municipalities. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_municipality_a0e330ab3f39d8fdaeb2927f10d111693}\label{class_municipality_a0e330ab3f39d8fdaeb2927f10d111693}} 
+std\+::string {\bfseries nome\+\_\+mun}
+\begin{DoxyCompactList}\small\item\em Name of the district. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_municipality_a058bdb9f0a12682a315e18ea45f1dbd7}{captotal}}
+\begin{DoxyCompactList}\small\item\em Total capacity. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a \mbox{\hyperlink{class_district}{District}}. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_municipality_ae982b2ded58ea17dc778b33652e7efe6}\label{class_municipality_ae982b2ded58ea17dc778b33652e7efe6}} 
+\index{Municipality@{Municipality}!Mun\_getCapacidade@{Mun\_getCapacidade}}
+\index{Mun\_getCapacidade@{Mun\_getCapacidade}!Municipality@{Municipality}}
+\doxysubsubsection{\texorpdfstring{Mun\_getCapacidade()}{Mun\_getCapacidade()}}
+{\footnotesize\ttfamily int Municipality\+::\+Mun\+\_\+get\+Capacidade (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets the total capacity. 
+
+\begin{DoxyReturn}{Returns}
+Maximum amount of trains simultaneously traveling in a municipality. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_municipality_afd819e571da6a33fcde3cbcbe659a432}\label{class_municipality_afd819e571da6a33fcde3cbcbe659a432}} 
+\index{Municipality@{Municipality}!Mun\_getNome@{Mun\_getNome}}
+\index{Mun\_getNome@{Mun\_getNome}!Municipality@{Municipality}}
+\doxysubsubsection{\texorpdfstring{Mun\_getNome()}{Mun\_getNome()}}
+{\footnotesize\ttfamily std\+::string Municipality\+::\+Mun\+\_\+get\+Nome (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets the name of the municipality. 
+
+\begin{DoxyReturn}{Returns}
+The district\textquotesingle{}s name. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_municipality_a8076fd5da222f6c6c76a3910d74ef5e9}\label{class_municipality_a8076fd5da222f6c6c76a3910d74ef5e9}} 
+\index{Municipality@{Municipality}!Mun\_setCapacidade@{Mun\_setCapacidade}}
+\index{Mun\_setCapacidade@{Mun\_setCapacidade}!Municipality@{Municipality}}
+\doxysubsubsection{\texorpdfstring{Mun\_setCapacidade()}{Mun\_setCapacidade()}}
+{\footnotesize\ttfamily void Municipality\+::\+Mun\+\_\+set\+Capacidade (\begin{DoxyParamCaption}\item[{int}]{n }\end{DoxyParamCaption})}
+
+
+
+Sets the total municipality. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & Capacity to be set. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_municipality_ab1148e3ff771441cae08a5dd3c1026b2}\label{class_municipality_ab1148e3ff771441cae08a5dd3c1026b2}} 
+\index{Municipality@{Municipality}!Mun\_setNome@{Mun\_setNome}}
+\index{Mun\_setNome@{Mun\_setNome}!Municipality@{Municipality}}
+\doxysubsubsection{\texorpdfstring{Mun\_setNome()}{Mun\_setNome()}}
+{\footnotesize\ttfamily void Municipality\+::\+Mun\+\_\+set\+Nome (\begin{DoxyParamCaption}\item[{std\+::string}]{n }\end{DoxyParamCaption})}
+
+
+
+Sets the name of the municipality. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & The district\textquotesingle{}s name. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_municipality_afceb12b7db973850b81869f6fed29218}\label{class_municipality_afceb12b7db973850b81869f6fed29218}} 
+\index{Municipality@{Municipality}!Mun\_updateCapacidade@{Mun\_updateCapacidade}}
+\index{Mun\_updateCapacidade@{Mun\_updateCapacidade}!Municipality@{Municipality}}
+\doxysubsubsection{\texorpdfstring{Mun\_updateCapacidade()}{Mun\_updateCapacidade()}}
+{\footnotesize\ttfamily void Municipality\+::\+Mun\+\_\+update\+Capacidade (\begin{DoxyParamCaption}\item[{int}]{n }\end{DoxyParamCaption})}
+
+
+
+Updates the current district municipality. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & Capacity to be added. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_municipality_a248912804208ea9543c7430ce5b23b8c}\label{class_municipality_a248912804208ea9543c7430ce5b23b8c}} 
+\index{Municipality@{Municipality}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!Municipality@{Municipality}}
+\doxysubsubsection{\texorpdfstring{operator$<$()}{operator<()}}
+{\footnotesize\ttfamily bool Municipality\+::operator$<$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_municipality}{Municipality}} \&}]{mun }\end{DoxyParamCaption})}
+
+
+
+Compares the equality between two municipalities. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mun} & \mbox{\hyperlink{class_municipality}{Municipality}} to be compared. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True-\/ If mun\textquotesingle{}s capacity is higher. 
+
+False-\/ If mun\textquotesingle{}s capacity is lower. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_municipality_a8a9095b27cc8b063d1e8bfd64d37a21c}\label{class_municipality_a8a9095b27cc8b063d1e8bfd64d37a21c}} 
+\index{Municipality@{Municipality}!operator==@{operator==}}
+\index{operator==@{operator==}!Municipality@{Municipality}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool Municipality\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_municipality}{Municipality}} \&}]{mun }\end{DoxyParamCaption})}
+
+
+
+Compares the equality between two municipalities. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mun} & \mbox{\hyperlink{class_municipality}{Municipality}} to be compared. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True-\/ If mun\textquotesingle{}s capacity is higher. 
+
+False-\/ If mun\textquotesingle{}s capacity is lower. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_municipality_a058bdb9f0a12682a315e18ea45f1dbd7}\label{class_municipality_a058bdb9f0a12682a315e18ea45f1dbd7}} 
+\index{Municipality@{Municipality}!captotal@{captotal}}
+\index{captotal@{captotal}!Municipality@{Municipality}}
+\doxysubsubsection{\texorpdfstring{captotal}{captotal}}
+{\footnotesize\ttfamily int Municipality\+::captotal\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Total capacity. 
+
+Total amount of trains that travel simultaneously in that municipality. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/nando/\+Desktop/\+DA/\+DA\+\_\+\+Projeto\+\_\+1/include/Estacao.\+h\item 
+C\+:/\+Users/nando/\+Desktop/\+DA/\+DA\+\_\+\+Projeto\+\_\+1/src/Estacao.\+cpp\end{DoxyCompactItemize}
