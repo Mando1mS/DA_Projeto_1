@@ -184,7 +184,7 @@ void Menu::TopEstacoes() {
 void Menu::MenuViz() {
     while (true) {
         std::cout << "--------------------------------------------------------\n";
-        std::cout << "|            Numero maximo de comboios                 |\n";
+        std::cout << "|            Vizualizar Rede                           |\n";
         std::cout << "|                                                      |\n";
         std::cout << "| 1 - Mostrar estacoes                                 |\n";
         std::cout << "| 2 - Mostrar network                                  |\n";
