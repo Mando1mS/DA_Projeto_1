@@ -22,7 +22,7 @@ public:
      * @brief Clears the current screen.
      */
      void MenuMaximo();
-
+     void MaxToStation();
      void MaxFlow();
      void TopEstacoes();
 };

@@ -28,6 +28,7 @@ public:
     Gestor();
     void MostrarEstacoes();
     void MostrarNetwork();
+    int MaxArrivingTrains(string station);
     int maxFlow(const string source,const string target);
     list<pair<string,string>> topestacoes();
 };

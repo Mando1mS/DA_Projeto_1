@@ -75,7 +75,7 @@ void Menu::MenuMaximo() {
                 MaxFlow();
                 break;
             case '2':
-                gestor_.MostrarNetwork();
+                MaxToStation();
                 break;
             case '3':
                 TopEstacoes();
@@ -123,6 +123,36 @@ void Menu::MaxFlow() {
         }
     }
 }
+
+void Menu::MaxToStation() {
+    string station;
+    cout << "Introduza o nome da estação: " << "\n";
+    try {
+        cin >> station;
+    }
+    catch (exception) {
+        cout << "Estação Inválida";
+    }
+    int res = gestor_.MaxArrivingTrains(station);
+    cout << "\n" << "Numero maximo de comboios que podem chegar em simultâneo: " << res;
+    cout << "\n";
+    cout << "Para voltar ao menu digite o numero '9' : ";
+    int opt = 0;
+    while (opt!=9)
+    {
+        cin >> opt;cout << "\n";
+        if(opt==9)
+        {
+            MenuMaximo();
+        }
+        else
+        {
+            cout << "Opcao invalida tente novamente... ";
+            cout << "\n";
+        }
+    }
+}
+
 void Menu::TopEstacoes() {
     auto lista =gestor_.topestacoes();
     int cont=1;

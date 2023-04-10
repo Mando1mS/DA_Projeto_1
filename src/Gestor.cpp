@@ -97,6 +97,14 @@ void Gestor::MostrarNetwork()
     }
 }
 
+int Gestor::MaxArrivingTrains(string station) {
+    int res = 0;
+    for (auto e: network_->nodes.at(station).adj) {
+        res += e.cap;
+    }
+    return res;
+}
+
 int Gestor::maxFlow(const string source,const string target) {
     return network_->maxFlow(source,target);
 }
