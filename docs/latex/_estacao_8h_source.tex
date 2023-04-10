@@ -1,0 +1,51 @@
+\hypertarget{_estacao_8h_source}{}\doxysection{Estacao.\+h}
+\label{_estacao_8h_source}\index{include/Estacao.h@{include/Estacao.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#ifndef DA\_PROJETO\_1\_ESTACAO\_H}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#define DA\_PROJETO\_1\_ESTACAO\_H}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}vector"{}}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{11 \textcolor{keyword}{class }\mbox{\hyperlink{class_district}{District}}\{}
+\DoxyCodeLine{12 \textcolor{keyword}{private}:}
+\DoxyCodeLine{16     std::string \mbox{\hyperlink{class_district_a787906b04a08f7719be4051b31931e34}{nome\_dist}};}
+\DoxyCodeLine{21     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_district_a8b2600f5cdc6b74d0b984ed36f0b85f9}{capacidade\_total}};}
+\DoxyCodeLine{22 \textcolor{keyword}{public}:}
+\DoxyCodeLine{27     std::string \mbox{\hyperlink{class_district_a8e669ef7fc469c5602c5df1237f167e2}{getNome}}();}
+\DoxyCodeLine{32     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_district_a2f8374d15e27dbab75853fcc80b2d24a}{getCapacidade}}();}
+\DoxyCodeLine{37     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_district_a438d054607cf1628d12301064a3de454}{setNome}}(std::string n);}
+\DoxyCodeLine{42     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_district_ab7387d71380780268d7e691cc1972ef4}{setCapacidade}}(\textcolor{keywordtype}{int} n);}
+\DoxyCodeLine{47     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_district_aa316ebbabe00050e2597fc342012c59e}{updateCapacidade}}(\textcolor{keywordtype}{int} n);}
+\DoxyCodeLine{54     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_district_adde73ae03db85166919f0991716aab7c}{operator<}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_district}{District}} \&dist);}
+\DoxyCodeLine{55 \};}
+\DoxyCodeLine{56 }
+\DoxyCodeLine{60 \textcolor{keyword}{class }\mbox{\hyperlink{class_estacao}{Estacao}}}
+\DoxyCodeLine{61 \{}
+\DoxyCodeLine{62     \textcolor{keyword}{private}:}
+\DoxyCodeLine{67     std::string \mbox{\hyperlink{class_estacao_ad33ed4a89d36ac82899cbfecc064bfdd}{nome\_}};}
+\DoxyCodeLine{71     \mbox{\hyperlink{class_district}{District}} \mbox{\hyperlink{class_estacao_a18f4dbe143632f6aaea901e6bc8e8cf7}{distrito\_}};}
+\DoxyCodeLine{75     std::string \mbox{\hyperlink{class_estacao_abaa049c439fe94c637ea88cfcb2eba4c}{concelho\_}};}
+\DoxyCodeLine{79     std::string \mbox{\hyperlink{class_estacao_a4e4a7057ed99914c1d4c7bf1ed2048bc}{localidade\_}};}
+\DoxyCodeLine{83     std::string \mbox{\hyperlink{class_estacao_a4fc7e31f57b61e2a88e1ceb128fdc2bf}{linha\_}};}
+\DoxyCodeLine{84 }
+\DoxyCodeLine{85     \textcolor{keyword}{public}:}
+\DoxyCodeLine{95     \mbox{\hyperlink{class_estacao}{Estacao}}(\textcolor{keyword}{const} std::string nome, \textcolor{keyword}{const} \mbox{\hyperlink{class_district}{District}} distrito, \textcolor{keyword}{const} std::string concelho, \textcolor{keyword}{const} std::string localidade, \textcolor{keyword}{const} std::string linha);}
+\DoxyCodeLine{100     std::string \mbox{\hyperlink{class_estacao_a3c73e1fb8e2fa6164cc97f5d5445e511}{getNome}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{105     \mbox{\hyperlink{class_district}{District}} \mbox{\hyperlink{class_estacao_a34280ee300bcd08308179b75b8e72afa}{getDistrito}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{110     std::string \mbox{\hyperlink{class_estacao_aafc4f216d25ce7f25ae3792e8ba64d62}{getConcelho}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{115     std::string \mbox{\hyperlink{class_estacao_a8d184b37d2c686850b9ae075438683d2}{getLocalidade}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{120     std::string \mbox{\hyperlink{class_estacao_a98bdc44a2d8eac280b849b3953497776}{getLinha}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{127     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_estacao_a79f751f3947e9ce13dc41578aee67643}{operator==}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_estacao}{Estacao}} \&estacao) \textcolor{keyword}{const};}
+\DoxyCodeLine{128 \};}
+\DoxyCodeLine{129 }
+\DoxyCodeLine{130 }
+\DoxyCodeLine{131 }
+\DoxyCodeLine{132 }
+\DoxyCodeLine{133 }
+\DoxyCodeLine{134 }
+\DoxyCodeLine{135 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//DA\_PROJETO\_1\_ESTACAO\_H}}
+
+\end{DoxyCode}

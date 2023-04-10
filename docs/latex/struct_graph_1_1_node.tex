@@ -1,0 +1,40 @@
+\hypertarget{struct_graph_1_1_node}{}\doxysection{Graph\+::Node Struct Reference}
+\label{struct_graph_1_1_node}\index{Graph::Node@{Graph::Node}}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_graph_1_1_node_a638f94fd235fc00b114a4afe95e144b9}\label{struct_graph_1_1_node_a638f94fd235fc00b114a4afe95e144b9}} 
+\mbox{\hyperlink{class_estacao}{Estacao}} {\bfseries estacao}
+\begin{DoxyCompactList}\small\item\em Station. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_graph_1_1_node_a63c47311990d51ec119ea4741c5e0406}\label{struct_graph_1_1_node_a63c47311990d51ec119ea4741c5e0406}} 
+std\+::list$<$ \mbox{\hyperlink{struct_graph_1_1_edge}{Edge}} $>$ {\bfseries adj}
+\begin{DoxyCompactList}\small\item\em List of outgoing edges, to adjacent nodes. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{struct_graph_1_1_node_a2360e752c746736f533bc4e673c1f80d}{visited}}
+\begin{DoxyCompactList}\small\item\em Verifies if the node has been visited on a previous search. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_graph_1_1_node_afd05dbb986edbafee59df693ed1bd965}\label{struct_graph_1_1_node_afd05dbb986edbafee59df693ed1bd965}} 
+list$<$ list$<$ pair$<$ \mbox{\hyperlink{class_estacao}{Estacao}}, string $>$ $>$ $>$ {\bfseries travel\+\_\+from\+\_\+src}
+\begin{DoxyCompactList}\small\item\em A list that stores another list with all the stations and services from the source all the way to the target node. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_graph_1_1_node_a8d84904a8e50fae551a784b90dae9777}\label{struct_graph_1_1_node_a8d84904a8e50fae551a784b90dae9777}} 
+string {\bfseries parent}
+\begin{DoxyCompactList}\small\item\em Stores the parent node of the child node. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_graph_1_1_node_a9914010f9a00b3aaa867f960aac552ea}\label{struct_graph_1_1_node_a9914010f9a00b3aaa867f960aac552ea}} 
+vector$<$ string $>$ {\bfseries path}
+\begin{DoxyCompactList}\small\item\em Stores the path from the source node to the current node. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{struct_graph_1_1_node_a2360e752c746736f533bc4e673c1f80d}\label{struct_graph_1_1_node_a2360e752c746736f533bc4e673c1f80d}} 
+\index{Graph::Node@{Graph::Node}!visited@{visited}}
+\index{visited@{visited}!Graph::Node@{Graph::Node}}
+\doxysubsubsection{\texorpdfstring{visited}{visited}}
+{\footnotesize\ttfamily bool Graph\+::\+Node\+::visited}
+
+
+
+Verifies if the node has been visited on a previous search. 
+
+This variable set to True means that the node has been visited and False otherwise. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/Graph.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,147 @@
+\hypertarget{class_gestor}{}\doxysection{Gestor Class Reference}
+\label{class_gestor}\index{Gestor@{Gestor}}
+
+
+{\ttfamily \#include $<$Gestor.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_gestor_a63ab3a451dcedb416578c35b5d57aca4}{Gestor}} ()
+\begin{DoxyCompactList}\small\item\em Creates a new manager. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_gestor_a0838e28ba59307a26b6d7095ef56cf58}\label{class_gestor_a0838e28ba59307a26b6d7095ef56cf58}} 
+void {\bfseries Mostrar\+Estacoes} ()
+\begin{DoxyCompactList}\small\item\em Prints all of the stored stations. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_gestor_a38686a9f22af58917c8bcd027a9881c4}\label{class_gestor_a38686a9f22af58917c8bcd027a9881c4}} 
+void {\bfseries Mostrar\+Network} ()
+\begin{DoxyCompactList}\small\item\em Prints all of the network connections. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_gestor_a198767f6bd46770cbf323575c15f0265}{Max\+Arriving\+Trains}} (string station)
+\begin{DoxyCompactList}\small\item\em Calculates the maximum amount of trains arriving at a given station. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_gestor_a347d16354cbf77bfe541e0e5ef6342ee}{max\+Flow}} (const string source, const string target)
+\begin{DoxyCompactList}\small\item\em Calculates the max flow between a source station and a target station. \end{DoxyCompactList}\item 
+list$<$ pair$<$ string, string $>$ $>$ \mbox{\hyperlink{class_gestor_a869bfa5d44683336e72934ea2785e411}{topestacoes}} ()
+\begin{DoxyCompactList}\small\item\em Prints the top 4 pair of stations with the most amount of trains traveling between them. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_gestor_ac26fc38085322536ffe3f882948f761a}{Trans\+Needs}} ()
+\begin{DoxyCompactList}\small\item\em Displays the \char`\"{}n\char`\"{} number of districts with the most transportation needs. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_gestor_a80e9add688d911a2a3d6f0e66be738c1}\label{class_gestor_a80e9add688d911a2a3d6f0e66be738c1}} 
+void {\bfseries Max\+Flow\+Sub\+Graph} (string EstacaoA, string EstacaoB)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_gestor_a27ac62bc2c3fae4062aff6dc98e2e7c9}{Ler\+Ficheiros}} ()
+\begin{DoxyCompactList}\small\item\em Reads all the data saved in the files and stores them in the correct structures. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_gestor_a5fe56ae085e4d2b1d81e8f0b2fa8c458}\label{class_gestor_a5fe56ae085e4d2b1d81e8f0b2fa8c458}} 
+\mbox{\hyperlink{class_graph}{Graph}} $\ast$ {\bfseries network\+\_\+}
+\begin{DoxyCompactList}\small\item\em A pointer to the network graph which contains all info about the train network. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_gestor_a3607d192a8467b667446345f50942145}\label{class_gestor_a3607d192a8467b667446345f50942145}} 
+vector$<$ \mbox{\hyperlink{class_district}{District}} $>$ {\bfseries distritos}
+\begin{DoxyCompactList}\small\item\em A vector that stores all of the station\textquotesingle{}s district information. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents the manager class used to connect the other classes with the user interface. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_gestor_a63ab3a451dcedb416578c35b5d57aca4}\label{class_gestor_a63ab3a451dcedb416578c35b5d57aca4}} 
+\index{Gestor@{Gestor}!Gestor@{Gestor}}
+\index{Gestor@{Gestor}!Gestor@{Gestor}}
+\doxysubsubsection{\texorpdfstring{Gestor()}{Gestor()}}
+{\footnotesize\ttfamily Gestor\+::\+Gestor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Creates a new manager. 
+
+Constructor of the \char`\"{}\+Gestor\char`\"{} class. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_gestor_a27ac62bc2c3fae4062aff6dc98e2e7c9}\label{class_gestor_a27ac62bc2c3fae4062aff6dc98e2e7c9}} 
+\index{Gestor@{Gestor}!LerFicheiros@{LerFicheiros}}
+\index{LerFicheiros@{LerFicheiros}!Gestor@{Gestor}}
+\doxysubsubsection{\texorpdfstring{LerFicheiros()}{LerFicheiros()}}
+{\footnotesize\ttfamily void Gestor\+::\+Ler\+Ficheiros (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Reads all the data saved in the files and stores them in the correct structures. 
+
+Time Complexity -\/ O(n$^\wedge$3). \mbox{\Hypertarget{class_gestor_a198767f6bd46770cbf323575c15f0265}\label{class_gestor_a198767f6bd46770cbf323575c15f0265}} 
+\index{Gestor@{Gestor}!MaxArrivingTrains@{MaxArrivingTrains}}
+\index{MaxArrivingTrains@{MaxArrivingTrains}!Gestor@{Gestor}}
+\doxysubsubsection{\texorpdfstring{MaxArrivingTrains()}{MaxArrivingTrains()}}
+{\footnotesize\ttfamily int Gestor\+::\+Max\+Arriving\+Trains (\begin{DoxyParamCaption}\item[{string}]{station }\end{DoxyParamCaption})}
+
+
+
+Calculates the maximum amount of trains arriving at a given station. 
+
+Time Complexity -\/ O(\+E). 
+\begin{DoxyParams}{Parameters}
+{\em station} & Station\textquotesingle{}s name. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Maximum amount of trains arriving at a giving station 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_gestor_a347d16354cbf77bfe541e0e5ef6342ee}\label{class_gestor_a347d16354cbf77bfe541e0e5ef6342ee}} 
+\index{Gestor@{Gestor}!maxFlow@{maxFlow}}
+\index{maxFlow@{maxFlow}!Gestor@{Gestor}}
+\doxysubsubsection{\texorpdfstring{maxFlow()}{maxFlow()}}
+{\footnotesize\ttfamily int Gestor\+::max\+Flow (\begin{DoxyParamCaption}\item[{const string}]{source,  }\item[{const string}]{target }\end{DoxyParamCaption})}
+
+
+
+Calculates the max flow between a source station and a target station. 
+
+Time Complexity -\/ O(\+VE$^\wedge$2).
+
+V is the number of vertices/nodes and E is the number of edges/links. 
+\begin{DoxyParams}{Parameters}
+{\em source} & Name of the source station. \\
+\hline
+{\em target} & Name of the destination station. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Maxflow(source,target). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_gestor_a869bfa5d44683336e72934ea2785e411}\label{class_gestor_a869bfa5d44683336e72934ea2785e411}} 
+\index{Gestor@{Gestor}!topestacoes@{topestacoes}}
+\index{topestacoes@{topestacoes}!Gestor@{Gestor}}
+\doxysubsubsection{\texorpdfstring{topestacoes()}{topestacoes()}}
+{\footnotesize\ttfamily list$<$ pair$<$ string, string $>$ $>$ Gestor\+::topestacoes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Prints the top 4 pair of stations with the most amount of trains traveling between them. 
+
+Time Complexity -\/ O(\+V$^\wedge$2(\+VE$^\wedge$2)). \begin{DoxyReturn}{Returns}
+List of pairs of stations. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_gestor_ac26fc38085322536ffe3f882948f761a}\label{class_gestor_ac26fc38085322536ffe3f882948f761a}} 
+\index{Gestor@{Gestor}!TransNeeds@{TransNeeds}}
+\index{TransNeeds@{TransNeeds}!Gestor@{Gestor}}
+\doxysubsubsection{\texorpdfstring{TransNeeds()}{TransNeeds()}}
+{\footnotesize\ttfamily void Gestor\+::\+Trans\+Needs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Displays the \char`\"{}n\char`\"{} number of districts with the most transportation needs. 
+
+Time Complexity -\/ O(\+Nlog(\+N))
+
+N is the number of districts. 
+\begin{DoxyParams}{Parameters}
+{\em n} & Number of districts to analyze. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/Gestor.\+h\item 
+src/Gestor.\+cpp\end{DoxyCompactItemize}

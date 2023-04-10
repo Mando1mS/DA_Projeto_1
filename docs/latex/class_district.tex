@@ -1,0 +1,145 @@
+\hypertarget{class_district}{}\doxysection{District Class Reference}
+\label{class_district}\index{District@{District}}
+
+
+{\ttfamily \#include $<$Estacao.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{class_district_a8e669ef7fc469c5602c5df1237f167e2}{get\+Nome}} ()
+\begin{DoxyCompactList}\small\item\em Gets the name of the district. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_district_a2f8374d15e27dbab75853fcc80b2d24a}{get\+Capacidade}} ()
+\begin{DoxyCompactList}\small\item\em Gets the total capacity. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_district_a438d054607cf1628d12301064a3de454}{set\+Nome}} (std\+::string n)
+\begin{DoxyCompactList}\small\item\em Sets the name of the district. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_district_ab7387d71380780268d7e691cc1972ef4}{set\+Capacidade}} (int n)
+\begin{DoxyCompactList}\small\item\em Sets the total capacity. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_district_aa316ebbabe00050e2597fc342012c59e}{update\+Capacidade}} (int n)
+\begin{DoxyCompactList}\small\item\em Updates the current district capacity. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_district_adde73ae03db85166919f0991716aab7c}{operator$<$}} (const \mbox{\hyperlink{class_district}{District}} \&dist)
+\begin{DoxyCompactList}\small\item\em Compares the equality between two districts. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_district_a787906b04a08f7719be4051b31931e34}\label{class_district_a787906b04a08f7719be4051b31931e34}} 
+std\+::string {\bfseries nome\+\_\+dist}
+\begin{DoxyCompactList}\small\item\em Name of the district. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_district_a8b2600f5cdc6b74d0b984ed36f0b85f9}{capacidade\+\_\+total}}
+\begin{DoxyCompactList}\small\item\em Total capacity. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a \mbox{\hyperlink{class_district}{District}}. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_district_a2f8374d15e27dbab75853fcc80b2d24a}\label{class_district_a2f8374d15e27dbab75853fcc80b2d24a}} 
+\index{District@{District}!getCapacidade@{getCapacidade}}
+\index{getCapacidade@{getCapacidade}!District@{District}}
+\doxysubsubsection{\texorpdfstring{getCapacidade()}{getCapacidade()}}
+{\footnotesize\ttfamily int District\+::get\+Capacidade (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets the total capacity. 
+
+\begin{DoxyReturn}{Returns}
+Maximum amount of trains simultaneously traveling in a district. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_district_a8e669ef7fc469c5602c5df1237f167e2}\label{class_district_a8e669ef7fc469c5602c5df1237f167e2}} 
+\index{District@{District}!getNome@{getNome}}
+\index{getNome@{getNome}!District@{District}}
+\doxysubsubsection{\texorpdfstring{getNome()}{getNome()}}
+{\footnotesize\ttfamily std\+::string District\+::get\+Nome (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets the name of the district. 
+
+\begin{DoxyReturn}{Returns}
+The district\textquotesingle{}s name. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_district_adde73ae03db85166919f0991716aab7c}\label{class_district_adde73ae03db85166919f0991716aab7c}} 
+\index{District@{District}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!District@{District}}
+\doxysubsubsection{\texorpdfstring{operator$<$()}{operator<()}}
+{\footnotesize\ttfamily bool District\+::operator$<$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_district}{District}} \&}]{dist }\end{DoxyParamCaption})}
+
+
+
+Compares the equality between two districts. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dist} & \mbox{\hyperlink{class_district}{District}} to be compared. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True-\/ If dist\textquotesingle{}s capacity is higher. 
+
+False-\/ If dist\textquotesingle{}s capacity is lower. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_district_ab7387d71380780268d7e691cc1972ef4}\label{class_district_ab7387d71380780268d7e691cc1972ef4}} 
+\index{District@{District}!setCapacidade@{setCapacidade}}
+\index{setCapacidade@{setCapacidade}!District@{District}}
+\doxysubsubsection{\texorpdfstring{setCapacidade()}{setCapacidade()}}
+{\footnotesize\ttfamily void District\+::set\+Capacidade (\begin{DoxyParamCaption}\item[{int}]{n }\end{DoxyParamCaption})}
+
+
+
+Sets the total capacity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & Capacity to be set. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_district_a438d054607cf1628d12301064a3de454}\label{class_district_a438d054607cf1628d12301064a3de454}} 
+\index{District@{District}!setNome@{setNome}}
+\index{setNome@{setNome}!District@{District}}
+\doxysubsubsection{\texorpdfstring{setNome()}{setNome()}}
+{\footnotesize\ttfamily void District\+::set\+Nome (\begin{DoxyParamCaption}\item[{std\+::string}]{n }\end{DoxyParamCaption})}
+
+
+
+Sets the name of the district. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & The district\textquotesingle{}s name. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_district_aa316ebbabe00050e2597fc342012c59e}\label{class_district_aa316ebbabe00050e2597fc342012c59e}} 
+\index{District@{District}!updateCapacidade@{updateCapacidade}}
+\index{updateCapacidade@{updateCapacidade}!District@{District}}
+\doxysubsubsection{\texorpdfstring{updateCapacidade()}{updateCapacidade()}}
+{\footnotesize\ttfamily void District\+::update\+Capacidade (\begin{DoxyParamCaption}\item[{int}]{n }\end{DoxyParamCaption})}
+
+
+
+Updates the current district capacity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & Capacity to be added. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_district_a8b2600f5cdc6b74d0b984ed36f0b85f9}\label{class_district_a8b2600f5cdc6b74d0b984ed36f0b85f9}} 
+\index{District@{District}!capacidade\_total@{capacidade\_total}}
+\index{capacidade\_total@{capacidade\_total}!District@{District}}
+\doxysubsubsection{\texorpdfstring{capacidade\_total}{capacidade\_total}}
+{\footnotesize\ttfamily int District\+::capacidade\+\_\+total\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Total capacity. 
+
+Total amount of trains that travel simultaneously in that district. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/Estacao.\+h\item 
+src/Estacao.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,198 @@
+\hypertarget{class_graph}{}\doxysection{Graph Class Reference}
+\label{class_graph}\index{Graph@{Graph}}
+
+
+{\ttfamily \#include $<$Graph.\+h$>$}
+
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_graph_1_1_edge}{Edge}}
+\item 
+struct \mbox{\hyperlink{struct_graph_1_1_node}{Node}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_graph_a90ec802850840c31f774f279b3670178}{add\+Node}} (const std\+::string \&nome\+\_\+estacao, const \mbox{\hyperlink{class_estacao}{Estacao}} \&estacao)
+\begin{DoxyCompactList}\small\item\em Add a node to the \mbox{\hyperlink{class_graph}{Graph}} using the name of the station as a key and the whole \char`\"{}\+Estacao\char`\"{} class as the value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_graph_ace740bb45a156e7a4051593cac4290bb}{add\+Edge}} (const std\+::string \&source\+\_\+estacao, const std\+::string \&target\+\_\+estacao, int cap, const std\+::string \&tipo)
+\begin{DoxyCompactList}\small\item\em Add an edge from a source station to a target station using the capacity of the line as the weight. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_graph_ade9776f2ca56177a7ebbab24601b3a34}{bfs}} (const std\+::string \&nome\+\_\+estacao)
+\begin{DoxyCompactList}\small\item\em Function used to do a Breadth-\/\+First Search (aka BFS). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_graph_a604a32bfdf348b23d133d1045c413ac1}{bfs2p}} (const std\+::string \&nome\+\_\+estacaoA, const std\+::string \&nome\+\_\+estacaoB)
+\begin{DoxyCompactList}\small\item\em A alternative BFS to calculate the shortest paths between 2 stations. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_graph_a6beca6bee8b22fb397ab9d6ccfd8a27e}{max\+Flow}} (string source, string target)
+\begin{DoxyCompactList}\small\item\em Function used to do Edmonds-\/karp algorithm. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_graph_a5830dd35a90540f0ef64c2300eb3c82b}{set\+Unvisited}} ()
+\begin{DoxyCompactList}\small\item\em Clears some variables in the graph to help implement other functions. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_graph_a1059ef01ee9ce85c37223a87c34133dd}{get\+Num\+Estacoes}} () const
+\item 
+\mbox{\Hypertarget{class_graph_a2ceb58882f472e8d9af3b7cbd156e92b}\label{class_graph_a2ceb58882f472e8d9af3b7cbd156e92b}} 
+void {\bfseries Max\+Flow\+Sub\+Graph} (string EstacaoA, string EstacaoB)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::unordered\+\_\+map$<$ std\+::string, \mbox{\hyperlink{struct_graph_1_1_node}{Node}} $>$ \mbox{\hyperlink{class_graph_a70b682ea94e98ca989eb2ba8867846b5}{nodes}}
+\begin{DoxyCompactList}\small\item\em A hash table containing the connection between the name of the station and its node. \end{DoxyCompactList}\item 
+std\+::unordered\+\_\+set$<$ std\+::string $>$ \mbox{\hyperlink{class_graph_aafbe0d354717438fa93d03202f89b9d9}{wanted\+\_\+lines}}
+\begin{DoxyCompactList}\small\item\em Set of lines favoured by the client. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_graph_a22af570c9b6a16f166f21f44837c9058}\label{class_graph_a22af570c9b6a16f166f21f44837c9058}} 
+list$<$ list$<$ string $>$ $>$ {\bfseries shortestpaths\+\_\+}
+\begin{DoxyCompactList}\small\item\em A list that stores all the shortest paths between 2 stations. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a \mbox{\hyperlink{class_graph}{Graph}}. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_graph_ace740bb45a156e7a4051593cac4290bb}\label{class_graph_ace740bb45a156e7a4051593cac4290bb}} 
+\index{Graph@{Graph}!addEdge@{addEdge}}
+\index{addEdge@{addEdge}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{addEdge()}{addEdge()}}
+{\footnotesize\ttfamily void Graph\+::add\+Edge (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{source\+\_\+estacao,  }\item[{const std\+::string \&}]{target\+\_\+estacao,  }\item[{int}]{cap,  }\item[{const std\+::string \&}]{tipo }\end{DoxyParamCaption})}
+
+
+
+Add an edge from a source station to a target station using the capacity of the line as the weight. 
+
+Time Complexity -\/ O($\vert$\+V$\vert$ + $\vert$\+E$\vert$).
+
+V is the number of vertices/nodes and E is the number of edges/links. 
+\begin{DoxyParams}{Parameters}
+{\em source\+\_\+estacao} & The source airport. \\
+\hline
+{\em target\+\_\+estacao} & The target airport. \\
+\hline
+{\em cap} & Number of simultaneously traveling trains in a line. \\
+\hline
+{\em tipo} & Type of service used. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_graph_a90ec802850840c31f774f279b3670178}\label{class_graph_a90ec802850840c31f774f279b3670178}} 
+\index{Graph@{Graph}!addNode@{addNode}}
+\index{addNode@{addNode}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{addNode()}{addNode()}}
+{\footnotesize\ttfamily void Graph\+::add\+Node (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{nome\+\_\+estacao,  }\item[{const \mbox{\hyperlink{class_estacao}{Estacao}} \&}]{estacao }\end{DoxyParamCaption})}
+
+
+
+Add a node to the \mbox{\hyperlink{class_graph}{Graph}} using the name of the station as a key and the whole \char`\"{}\+Estacao\char`\"{} class as the value. 
+
+Time Complexity -\/ O($\vert$\+V$\vert$ + $\vert$\+E$\vert$).
+
+V is the number of vertices/nodes and E is the number of edges/links. 
+\begin{DoxyParams}{Parameters}
+{\em nome\+\_\+estacao} & Name of the station. \\
+\hline
+{\em estacao} & All of the station information. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_graph_ade9776f2ca56177a7ebbab24601b3a34}\label{class_graph_ade9776f2ca56177a7ebbab24601b3a34}} 
+\index{Graph@{Graph}!bfs@{bfs}}
+\index{bfs@{bfs}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{bfs()}{bfs()}}
+{\footnotesize\ttfamily void Graph\+::bfs (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{nome\+\_\+estacao }\end{DoxyParamCaption})}
+
+
+
+Function used to do a Breadth-\/\+First Search (aka BFS). 
+
+Time Complexity -\/ O($\vert$\+V$\vert$ + $\vert$\+E$\vert$).
+
+V is the number of vertices/nodes and E is the number of edges/links. 
+\begin{DoxyParams}{Parameters}
+{\em nome\+\_\+estacao} & Name of the station. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_graph_a604a32bfdf348b23d133d1045c413ac1}\label{class_graph_a604a32bfdf348b23d133d1045c413ac1}} 
+\index{Graph@{Graph}!bfs2p@{bfs2p}}
+\index{bfs2p@{bfs2p}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{bfs2p()}{bfs2p()}}
+{\footnotesize\ttfamily void Graph\+::bfs2p (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{nome\+\_\+estacaoA,  }\item[{const std\+::string \&}]{nome\+\_\+estacaoB }\end{DoxyParamCaption})}
+
+
+
+A alternative BFS to calculate the shortest paths between 2 stations. 
+
+Time Complexity -\/ O($\vert$\+V$^\wedge$2$\vert$ + $\vert$\+E$\vert$).
+
+V is the number of vertices/nodes and E is the number of edges/links. 
+\begin{DoxyParams}{Parameters}
+{\em nome\+\_\+estacaoA} & Name of the source station. \\
+\hline
+{\em nome\+\_\+estacaoB} & Name of the destination station. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_graph_a1059ef01ee9ce85c37223a87c34133dd}\label{class_graph_a1059ef01ee9ce85c37223a87c34133dd}} 
+\index{Graph@{Graph}!getNumEstacoes@{getNumEstacoes}}
+\index{getNumEstacoes@{getNumEstacoes}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{getNumEstacoes()}{getNumEstacoes()}}
+{\footnotesize\ttfamily int Graph\+::get\+Num\+Estacoes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Yields the number of stations. \begin{DoxyReturn}{Returns}
+Number of stations present in the graph. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_graph_a6beca6bee8b22fb397ab9d6ccfd8a27e}\label{class_graph_a6beca6bee8b22fb397ab9d6ccfd8a27e}} 
+\index{Graph@{Graph}!maxFlow@{maxFlow}}
+\index{maxFlow@{maxFlow}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{maxFlow()}{maxFlow()}}
+{\footnotesize\ttfamily int Graph\+::max\+Flow (\begin{DoxyParamCaption}\item[{string}]{source,  }\item[{string}]{target }\end{DoxyParamCaption})}
+
+
+
+Function used to do Edmonds-\/karp algorithm. 
+
+Time Complexity -\/ O(\+VE$^\wedge$2).
+
+V is the number of vertices/nodes and E is the number of edges/links. 
+\begin{DoxyParams}{Parameters}
+{\em nome\+\_\+estacaoA} & Name of the source station. \\
+\hline
+{\em nome\+\_\+estacaoB} & Name of the destination station. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_graph_a5830dd35a90540f0ef64c2300eb3c82b}\label{class_graph_a5830dd35a90540f0ef64c2300eb3c82b}} 
+\index{Graph@{Graph}!setUnvisited@{setUnvisited}}
+\index{setUnvisited@{setUnvisited}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{setUnvisited()}{setUnvisited()}}
+{\footnotesize\ttfamily void Graph\+::set\+Unvisited (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Clears some variables in the graph to help implement other functions. 
+
+Clears every path from each node.
+
+Sets all nodes to unvisited
+
+Clears the list of the shortest paths. 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_graph_a70b682ea94e98ca989eb2ba8867846b5}\label{class_graph_a70b682ea94e98ca989eb2ba8867846b5}} 
+\index{Graph@{Graph}!nodes@{nodes}}
+\index{nodes@{nodes}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{nodes}{nodes}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$std\+::string, \mbox{\hyperlink{struct_graph_1_1_node}{Node}}$>$ Graph\+::nodes}
+
+
+
+A hash table containing the connection between the name of the station and its node. 
+
+When searching the Time Complexity is O(1). \mbox{\Hypertarget{class_graph_aafbe0d354717438fa93d03202f89b9d9}\label{class_graph_aafbe0d354717438fa93d03202f89b9d9}} 
+\index{Graph@{Graph}!wanted\_lines@{wanted\_lines}}
+\index{wanted\_lines@{wanted\_lines}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{wanted\_lines}{wanted\_lines}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+set$<$std\+::string$>$ Graph\+::wanted\+\_\+lines}
+
+
+
+Set of lines favoured by the client. 
+
+Can be empty. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/Graph.\+h\item 
+src/Graph.\+cpp\end{DoxyCompactItemize}

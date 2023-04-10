@@ -1,0 +1,176 @@
+\hypertarget{class_estacao}{}\doxysection{Estacao Class Reference}
+\label{class_estacao}\index{Estacao@{Estacao}}
+
+
+{\ttfamily \#include $<$Estacao.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_estacao_a62fd617b4b93f108d6c4390839fb91b7}{Estacao}} (const std\+::string nome, const \mbox{\hyperlink{class_district}{District}} distrito, const std\+::string concelho, const std\+::string localidade, const std\+::string linha)
+\begin{DoxyCompactList}\small\item\em Creates a new station. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_estacao_a3c73e1fb8e2fa6164cc97f5d5445e511}{get\+Nome}} () const
+\begin{DoxyCompactList}\small\item\em Gets the name of the station. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_district}{District}} \mbox{\hyperlink{class_estacao_a34280ee300bcd08308179b75b8e72afa}{get\+Distrito}} () const
+\begin{DoxyCompactList}\small\item\em Gets the name of the \mbox{\hyperlink{class_district}{District}} the station belongs to. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_estacao_aafc4f216d25ce7f25ae3792e8ba64d62}{get\+Concelho}} () const
+\begin{DoxyCompactList}\small\item\em Gets the name of the Municipality the station belongs to. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_estacao_a8d184b37d2c686850b9ae075438683d2}{get\+Localidade}} () const
+\begin{DoxyCompactList}\small\item\em Gets the name of the Township the station belongs to. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_estacao_a98bdc44a2d8eac280b849b3953497776}{get\+Linha}} () const
+\begin{DoxyCompactList}\small\item\em Gets the line the station operates on. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_estacao_a79f751f3947e9ce13dc41578aee67643}{operator==}} (const \mbox{\hyperlink{class_estacao}{Estacao}} \&estacao) const
+\begin{DoxyCompactList}\small\item\em Compares the equality between two stations. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{class_estacao_ad33ed4a89d36ac82899cbfecc064bfdd}{nome\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Name of the station. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_estacao_a18f4dbe143632f6aaea901e6bc8e8cf7}\label{class_estacao_a18f4dbe143632f6aaea901e6bc8e8cf7}} 
+\mbox{\hyperlink{class_district}{District}} {\bfseries distrito\+\_\+}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_district}{District}} the station belongs to. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_estacao_abaa049c439fe94c637ea88cfcb2eba4c}\label{class_estacao_abaa049c439fe94c637ea88cfcb2eba4c}} 
+std\+::string {\bfseries concelho\+\_\+}
+\begin{DoxyCompactList}\small\item\em Municipality the station belongs to. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_estacao_a4e4a7057ed99914c1d4c7bf1ed2048bc}\label{class_estacao_a4e4a7057ed99914c1d4c7bf1ed2048bc}} 
+std\+::string {\bfseries localidade\+\_\+}
+\begin{DoxyCompactList}\small\item\em Township the station belongs to. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_estacao_a4fc7e31f57b61e2a88e1ceb128fdc2bf}\label{class_estacao_a4fc7e31f57b61e2a88e1ceb128fdc2bf}} 
+std\+::string {\bfseries linha\+\_\+}
+\begin{DoxyCompactList}\small\item\em The line which the station operates on. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a station. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_estacao_a62fd617b4b93f108d6c4390839fb91b7}\label{class_estacao_a62fd617b4b93f108d6c4390839fb91b7}} 
+\index{Estacao@{Estacao}!Estacao@{Estacao}}
+\index{Estacao@{Estacao}!Estacao@{Estacao}}
+\doxysubsubsection{\texorpdfstring{Estacao()}{Estacao()}}
+{\footnotesize\ttfamily Estacao\+::\+Estacao (\begin{DoxyParamCaption}\item[{const std\+::string}]{nome,  }\item[{const \mbox{\hyperlink{class_district}{District}}}]{distrito,  }\item[{const std\+::string}]{concelho,  }\item[{const std\+::string}]{localidade,  }\item[{const std\+::string}]{linha }\end{DoxyParamCaption})}
+
+
+
+Creates a new station. 
+
+Constructor of the \char`\"{}\+Estacao\char`\"{} class. 
+\begin{DoxyParams}{Parameters}
+{\em nome} & Station\textquotesingle{}s name. \\
+\hline
+{\em distrito} & \mbox{\hyperlink{class_district}{District}}. \\
+\hline
+{\em concelho} & Municipality. \\
+\hline
+{\em localidade} & Township. \\
+\hline
+{\em linha} & Line of network. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_estacao_aafc4f216d25ce7f25ae3792e8ba64d62}\label{class_estacao_aafc4f216d25ce7f25ae3792e8ba64d62}} 
+\index{Estacao@{Estacao}!getConcelho@{getConcelho}}
+\index{getConcelho@{getConcelho}!Estacao@{Estacao}}
+\doxysubsubsection{\texorpdfstring{getConcelho()}{getConcelho()}}
+{\footnotesize\ttfamily std\+::string Estacao\+::get\+Concelho (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the name of the Municipality the station belongs to. 
+
+\begin{DoxyReturn}{Returns}
+Township\textquotesingle{}s name.. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_estacao_a34280ee300bcd08308179b75b8e72afa}\label{class_estacao_a34280ee300bcd08308179b75b8e72afa}} 
+\index{Estacao@{Estacao}!getDistrito@{getDistrito}}
+\index{getDistrito@{getDistrito}!Estacao@{Estacao}}
+\doxysubsubsection{\texorpdfstring{getDistrito()}{getDistrito()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_district}{District}} Estacao\+::get\+Distrito (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the name of the \mbox{\hyperlink{class_district}{District}} the station belongs to. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_district}{District}}\textquotesingle{}s name.. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_estacao_a98bdc44a2d8eac280b849b3953497776}\label{class_estacao_a98bdc44a2d8eac280b849b3953497776}} 
+\index{Estacao@{Estacao}!getLinha@{getLinha}}
+\index{getLinha@{getLinha}!Estacao@{Estacao}}
+\doxysubsubsection{\texorpdfstring{getLinha()}{getLinha()}}
+{\footnotesize\ttfamily std\+::string Estacao\+::get\+Linha (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the line the station operates on. 
+
+\begin{DoxyReturn}{Returns}
+Line\textquotesingle{}s name. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_estacao_a8d184b37d2c686850b9ae075438683d2}\label{class_estacao_a8d184b37d2c686850b9ae075438683d2}} 
+\index{Estacao@{Estacao}!getLocalidade@{getLocalidade}}
+\index{getLocalidade@{getLocalidade}!Estacao@{Estacao}}
+\doxysubsubsection{\texorpdfstring{getLocalidade()}{getLocalidade()}}
+{\footnotesize\ttfamily std\+::string Estacao\+::get\+Localidade (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the name of the Township the station belongs to. 
+
+\begin{DoxyReturn}{Returns}
+Township\textquotesingle{}s name. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_estacao_a3c73e1fb8e2fa6164cc97f5d5445e511}\label{class_estacao_a3c73e1fb8e2fa6164cc97f5d5445e511}} 
+\index{Estacao@{Estacao}!getNome@{getNome}}
+\index{getNome@{getNome}!Estacao@{Estacao}}
+\doxysubsubsection{\texorpdfstring{getNome()}{getNome()}}
+{\footnotesize\ttfamily std\+::string Estacao\+::get\+Nome (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the name of the station. 
+
+\begin{DoxyReturn}{Returns}
+Station\textquotesingle{}s name.. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_estacao_a79f751f3947e9ce13dc41578aee67643}\label{class_estacao_a79f751f3947e9ce13dc41578aee67643}} 
+\index{Estacao@{Estacao}!operator==@{operator==}}
+\index{operator==@{operator==}!Estacao@{Estacao}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool Estacao\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_estacao}{Estacao}} \&}]{estacao }\end{DoxyParamCaption}) const}
+
+
+
+Compares the equality between two stations. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em estacao} & Station to be compared. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True-\/ If both names are the same. 
+
+False-\/ If the names are not equal. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_estacao_ad33ed4a89d36ac82899cbfecc064bfdd}\label{class_estacao_ad33ed4a89d36ac82899cbfecc064bfdd}} 
+\index{Estacao@{Estacao}!nome\_@{nome\_}}
+\index{nome\_@{nome\_}!Estacao@{Estacao}}
+\doxysubsubsection{\texorpdfstring{nome\_}{nome\_}}
+{\footnotesize\ttfamily std\+::string Estacao\+::nome\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Name of the station. 
+
+The name of the station is unique and so it is possible to identify which station is referenced by its name. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/Estacao.\+h\item 
+src/Estacao.\+cpp\end{DoxyCompactItemize}

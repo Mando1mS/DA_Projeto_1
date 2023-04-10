@@ -1,0 +1,59 @@
+\hypertarget{_graph_8h_source}{}\doxysection{Graph.\+h}
+\label{_graph_8h_source}\index{include/Graph.h@{include/Graph.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#ifndef DA\_PROJETO\_1\_GRAPH\_H}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#define DA\_PROJETO\_1\_GRAPH\_H}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <queue>}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <limits>}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include <algorithm>}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include <list>}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include <unordered\_map>}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#include <unordered\_set>}}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15 }
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#include "{}../include/Estacao.h"{}}}
+\DoxyCodeLine{17 }
+\DoxyCodeLine{18 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{22 \textcolor{keyword}{class }\mbox{\hyperlink{class_graph}{Graph}} \{}
+\DoxyCodeLine{23 \textcolor{keyword}{private}:}
+\DoxyCodeLine{24     \textcolor{keyword}{struct }\mbox{\hyperlink{struct_graph_1_1_edge}{Edge}} \{}
+\DoxyCodeLine{29         std::string \mbox{\hyperlink{struct_graph_1_1_edge_a83eb473053bb2c11afc7fc65c6c1bf01}{dest}};}
+\DoxyCodeLine{33         std::string \mbox{\hyperlink{struct_graph_1_1_edge_acb9d6115271403a4222bf4a829f1f786}{serv}};}
+\DoxyCodeLine{38         \textcolor{keywordtype}{int} \mbox{\hyperlink{struct_graph_1_1_edge_a984410210075aab26d8dbd5739886d89}{cap}};}
+\DoxyCodeLine{43         \textcolor{keywordtype}{int} \mbox{\hyperlink{struct_graph_1_1_edge_ab1186050dff969b57602bbe2903f6796}{flow}} = 0;}
+\DoxyCodeLine{44     \};}
+\DoxyCodeLine{45     \textcolor{keyword}{struct }\mbox{\hyperlink{struct_graph_1_1_node}{Node}} \{}
+\DoxyCodeLine{49         \mbox{\hyperlink{class_estacao}{Estacao}} \mbox{\hyperlink{struct_graph_1_1_node_a638f94fd235fc00b114a4afe95e144b9}{estacao}};}
+\DoxyCodeLine{53         std::list<Edge> \mbox{\hyperlink{struct_graph_1_1_node_a63c47311990d51ec119ea4741c5e0406}{adj}};}
+\DoxyCodeLine{58         \textcolor{keywordtype}{bool} \mbox{\hyperlink{struct_graph_1_1_node_a2360e752c746736f533bc4e673c1f80d}{visited}};}
+\DoxyCodeLine{62         list<list<pair<Estacao,string>>> \mbox{\hyperlink{struct_graph_1_1_node_afd05dbb986edbafee59df693ed1bd965}{travel\_from\_src}};}
+\DoxyCodeLine{66         \textcolor{keywordtype}{string} \mbox{\hyperlink{struct_graph_1_1_node_a8d84904a8e50fae551a784b90dae9777}{parent}};}
+\DoxyCodeLine{70         vector<string> \mbox{\hyperlink{struct_graph_1_1_node_a9914010f9a00b3aaa867f960aac552ea}{path}};}
+\DoxyCodeLine{71     \};}
+\DoxyCodeLine{72 }
+\DoxyCodeLine{73 \textcolor{keyword}{public}:}
+\DoxyCodeLine{74     \mbox{\hyperlink{class_graph}{Graph}}();}
+\DoxyCodeLine{82     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_graph_a90ec802850840c31f774f279b3670178}{addNode}}(\textcolor{keyword}{const} std::string \&nome\_estacao, \textcolor{keyword}{const} \mbox{\hyperlink{class_estacao}{Estacao}} \&estacao);}
+\DoxyCodeLine{92     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_graph_ace740bb45a156e7a4051593cac4290bb}{addEdge}}(\textcolor{keyword}{const} std::string\& source\_estacao, \textcolor{keyword}{const} std::string\& target\_estacao,\textcolor{keywordtype}{int} cap, \textcolor{keyword}{const} std::string\& tipo);}
+\DoxyCodeLine{97     std::unordered\_map<std::string, Node> \mbox{\hyperlink{class_graph_a70b682ea94e98ca989eb2ba8867846b5}{nodes}};}
+\DoxyCodeLine{102     std::unordered\_set<std::string> \mbox{\hyperlink{class_graph_aafbe0d354717438fa93d03202f89b9d9}{wanted\_lines}};}
+\DoxyCodeLine{109     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_graph_ade9776f2ca56177a7ebbab24601b3a34}{bfs}}(\textcolor{keyword}{const} std::string \&nome\_estacao);}
+\DoxyCodeLine{113     list<list<string>> \mbox{\hyperlink{class_graph_a22af570c9b6a16f166f21f44837c9058}{shortestpaths\_}};}
+\DoxyCodeLine{121     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_graph_a604a32bfdf348b23d133d1045c413ac1}{bfs2p}}(\textcolor{keyword}{const} std::string \&nome\_estacaoA,\textcolor{keyword}{const} std::string \&nome\_estacaoB);}
+\DoxyCodeLine{129     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_graph_a6beca6bee8b22fb397ab9d6ccfd8a27e}{maxFlow}}(\textcolor{keywordtype}{string} source, \textcolor{keywordtype}{string} target);}
+\DoxyCodeLine{136     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_graph_a5830dd35a90540f0ef64c2300eb3c82b}{setUnvisited}}();}
+\DoxyCodeLine{141     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_graph_a1059ef01ee9ce85c37223a87c34133dd}{getNumEstacoes}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{142 }
+\DoxyCodeLine{143     \textcolor{keywordtype}{void} MaxFlowSubGraph(\textcolor{keywordtype}{string} EstacaoA, \textcolor{keywordtype}{string} EstacaoB);}
+\DoxyCodeLine{144 \};}
+\DoxyCodeLine{145 }
+\DoxyCodeLine{146 }
+\DoxyCodeLine{147 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//DA\_PROJETO\_1\_GRAPH\_H}}
+
+\end{DoxyCode}

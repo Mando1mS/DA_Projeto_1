@@ -139,6 +139,7 @@ public:
      * @return Number of stations present in the graph.
      */
     int getNumEstacoes() const;
+
 };
 
 
