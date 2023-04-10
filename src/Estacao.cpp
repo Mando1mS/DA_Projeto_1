@@ -1,6 +1,6 @@
 #include "../include/Estacao.h"
 
-Estacao::Estacao(const std::string nome, District distrito, const std::string concelho,
+Estacao::Estacao(const std::string nome, District distrito, const Municipality concelho,
                  const std::string localidade, const std::string linha):nome_(nome),distrito_(distrito),concelho_(concelho),localidade_(localidade),linha_(linha) {
 }
 
@@ -12,7 +12,7 @@ District Estacao::getDistrito() const {
     return distrito_;
 }
 
-std::string Estacao::getConcelho() const {
+Municipality Estacao::getConcelho() const {
     return concelho_;
 }
 
@@ -52,4 +52,33 @@ void District::updateCapacidade(int n) {
 bool District::operator<(const District &dist)
 {
     return capacidade_total>dist.capacidade_total;
+}
+
+std::string Municipality::Mun_getNome() {
+    return nome_mun;
+}
+
+int Municipality::Mun_getCapacidade() {
+    return captotal;
+}
+
+void Municipality::Mun_setNome(std::string n) {
+    nome_mun=n;
+}
+
+void Municipality::Mun_setCapacidade(int n) {
+    captotal=n;
+}
+
+void Municipality::Mun_updateCapacidade(int n) {
+    captotal+=n;
+}
+
+bool Municipality::operator<(const Municipality &mun)
+{
+    return captotal>mun.captotal;
+}
+
+bool Municipality::operator==(const Municipality &mun) {
+    return nome_mun==mun.nome_mun;
 }

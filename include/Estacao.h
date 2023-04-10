@@ -52,6 +52,64 @@ public:
      * @return False- If dist's capacity is lower.
      */
     bool operator<(const District &dist);
+
+
+};
+
+/**
+ * Represents a District.
+ */
+class Municipality{
+private:
+    /**
+     * @brief Name of the district.
+     */
+    std::string nome_mun;
+    /**
+     * @brief Total capacity.
+     * @details Total amount of trains that travel simultaneously in that municipality.
+     */
+    int captotal;
+public:
+    /**
+     * @brief Gets the name of the municipality.
+     * @return The district's name.
+     */
+    std::string Mun_getNome();
+    /**
+     * @brief Gets the total capacity.
+     * @return Maximum amount of trains simultaneously traveling in a municipality.
+     */
+    int Mun_getCapacidade();
+    /**
+     * @brief Sets the name of the municipality.
+     * @param n The district's name.
+     */
+    void Mun_setNome(std::string n);
+    /**
+     * @brief Sets the total municipality.
+     * @param n Capacity to be set.
+     */
+    void Mun_setCapacidade(int n);
+    /**
+     * @brief Updates the current district municipality.
+     * @param n Capacity to be added.
+     */
+    void Mun_updateCapacidade(int n);
+    /**
+     * @brief Compares the equality between two municipalities.
+     * @param mun Municipality to be compared.
+     * @return True- If mun's capacity is higher.
+     * @return False- If mun's capacity is lower.
+     */
+    bool operator<(const Municipality &mun);
+    /**
+     * @brief Compares the equality between two municipalities.
+     * @param mun Municipality to be compared.
+     * @return True- If mun's capacity is higher.
+     * @return False- If mun's capacity is lower.
+     */
+    bool operator==(const Municipality &mun);
 };
 
 /**
@@ -72,7 +130,7 @@ class Estacao
     /**
      * @brief Municipality the station belongs to.
      */
-    std::string concelho_;
+    Municipality concelho_;
     /**
      * @brief Township the station belongs to.
      */
@@ -92,22 +150,22 @@ class Estacao
      * @param localidade Township.
      * @param linha Line of network.
      */
-    Estacao(const std::string nome, const District distrito, const std::string concelho, const std::string localidade, const std::string linha);
+    Estacao(const std::string nome, const District distrito, const Municipality concelho, const std::string localidade, const std::string linha);
     /**
      * @brief Gets the name of the station.
-     * @return Station's name..
+     * @return Station's name.
      */
     std::string getNome() const;
     /**
      * @brief Gets the name of the District the station belongs to.
-     * @return District's name..
+     * @return District's name.
      */
     District getDistrito() const;
     /**
      * @brief Gets the name of the Municipality the station belongs to.
-     * @return Township's name..
+     * @return Municipality's name.
      */
-    std::string getConcelho() const;
+    Municipality getConcelho() const;
     /**
      * @brief Gets the name of the Township the station belongs to.
      * @return Township's name.

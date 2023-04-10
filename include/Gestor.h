@@ -19,6 +19,10 @@ private:
      */
     vector<District> distritos;
     /**
+     * @brief A set that stores all of the station's municipality information.
+     */
+    vector<Municipality> municip;
+    /**
     * @brief Reads all the data saved in the files and stores them in the correct structures.
     * @details Time Complexity - O(n^3).
     */
@@ -65,6 +69,7 @@ public:
      * @details N is the number of districts.
      * @param n Number of districts to analyze.
      */
-    void TransNeeds();
+    void TransNeeds_Dist();
+    void TransNeeds_Mun();
 };
 #endif //DA_PROJETO_1_GESTOR_H

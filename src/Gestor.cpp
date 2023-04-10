@@ -32,12 +32,19 @@ void Gestor::LerFicheiros() {
         getline(ss, linha, '\r');
 
         District d;
-        Estacao estacao = Estacao(nome, d, concelho, localidade, linha);
+        Municipality m;
+        m.Mun_setNome(concelho);
+        m.Mun_setCapacidade(0);
+        if(!std::count(municip.begin(), municip.end(), m))
+        {
+            municip.push_back(m);
+        }
+        Estacao estacao = Estacao(nome, d, m, localidade, linha);
 
         bool found = false;
         for (auto x: distritos) {
             if (x.getNome() == distrito) {
-                estacao = Estacao(nome, x, concelho, localidade, linha);
+                estacao = Estacao(nome, x, m, localidade, linha);
                 found = true;
                 break;
             }
@@ -46,7 +53,7 @@ void Gestor::LerFicheiros() {
             d.setCapacidade(0);
             d.setNome(distrito);
             distritos.push_back(d);
-            estacao = Estacao(nome, d, concelho, localidade, linha);
+            estacao = Estacao(nome, d, m, localidade, linha);
         }
         network_->addNode(nome, estacao);//n
     }
@@ -65,6 +72,11 @@ void Gestor::LerFicheiros() {
         for (auto itr=distritos.begin(); itr!=distritos.end(); itr++) {
             if (itr->getNome() == network_->nodes.at(source).estacao.getDistrito().getNome()) {
                 itr->updateCapacidade(std::stoi(cap));
+            }
+        }
+        for (auto itr=municip.begin(); itr!=municip.end(); itr++) {
+            if (itr->Mun_getNome() == network_->nodes.at(source).estacao.getConcelho().Mun_getNome()) {
+                itr->Mun_updateCapacidade(std::stoi(cap));
             }
         }
     }
@@ -142,7 +154,7 @@ list<pair<string,string>> Gestor::topestacoes()
     return res;
 }
 
-void Gestor::TransNeeds() {
+void Gestor::TransNeeds_Dist() {
     int n;
     cout << "Insere o numero total de distritos para vizualizar: ";
     cin >> n;
@@ -158,5 +170,24 @@ void Gestor::TransNeeds() {
     else
     {
         cout << "Nao existe mais que 18 distritos em Portugal. \n";
+    }
+}
+
+void Gestor::TransNeeds_Mun() {
+    int n;
+    cout << "Insere o numero total de concelhos para vizualizar: ";
+    cin >> n;
+    cout << "\n";
+    if(n>=1 && n <=60)
+    {
+        std::sort(municip.begin(),municip.end());
+        for(int i=0;i<n;i++) {
+            cout << "Concelho numero " << i << " - " << municip[i].Mun_getNome() << " com capacidade total: "
+                 << municip[i].Mun_getCapacidade() << "\n";
+        }
+    }
+    else
+    {
+        cout << "Numero maximo de 60 concelhos. \n";
     }
 }

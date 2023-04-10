@@ -229,7 +229,7 @@ void Menu::MenuNeeds() {
         std::cout << "|                    Transportation needs              |\n";
         std::cout << "|                                                      |\n";
         std::cout << "| 1 - Districts                                        |\n";
-        std::cout << "|                                                      |\n";
+        std::cout << "| 2 - Municipality                                     |\n";
         std::cout << "|                                                      |\n";
         std::cout << "|                                                      |\n";
         std::cout << "| 9 - Go back                                          |\n";
@@ -247,10 +247,12 @@ void Menu::MenuNeeds() {
 
         switch (opt) {
             case '1':
-                gestor_.TransNeeds();
+                gestor_.TransNeeds_Dist();
                 MenuNeeds();
                 break;
             case '2':
+                gestor_.TransNeeds_Mun();
+                MenuNeeds();
                 break;
             case '9':
                 iniciarMenu();
