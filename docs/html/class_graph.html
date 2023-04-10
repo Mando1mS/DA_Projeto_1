@@ -78,6 +78,9 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>Represents a <a class="el" href="class_graph.html" title="Represents a Graph.">Graph</a>.  
+ <a href="class_graph.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_graph_8h_source.html">Graph.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
@@ -90,7 +93,7 @@ Classes</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a90ec802850840c31f774f279b3670178"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graph.html#a90ec802850840c31f774f279b3670178">addNode</a> (const std::string &amp;nome_estacao, const <a class="el" href="class_estacao.html">Estacao</a> &amp;estacao)</td></tr>
-<tr class="memdesc:a90ec802850840c31f774f279b3670178"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a node to the <a class="el" href="class_graph.html">Graph</a> using the name of the station as a key and the whole "Estacao" class as the value.  <a href="class_graph.html#a90ec802850840c31f774f279b3670178">More...</a><br /></td></tr>
+<tr class="memdesc:a90ec802850840c31f774f279b3670178"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a node to the <a class="el" href="class_graph.html" title="Represents a Graph.">Graph</a> using the name of the station as a key and the whole "Estacao" class as the value.  <a href="class_graph.html#a90ec802850840c31f774f279b3670178">More...</a><br /></td></tr>
 <tr class="separator:a90ec802850840c31f774f279b3670178"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ace740bb45a156e7a4051593cac4290bb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graph.html#ace740bb45a156e7a4051593cac4290bb">addEdge</a> (const std::string &amp;source_estacao, const std::string &amp;target_estacao, int cap, const std::string &amp;tipo)</td></tr>
 <tr class="memdesc:ace740bb45a156e7a4051593cac4290bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add an edge from a source station to a target station using the capacity of the line as the weight.  <a href="class_graph.html#ace740bb45a156e7a4051593cac4290bb">More...</a><br /></td></tr>
@@ -109,9 +112,6 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a5830dd35a90540f0ef64c2300eb3c82b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1059ef01ee9ce85c37223a87c34133dd"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graph.html#a1059ef01ee9ce85c37223a87c34133dd">getNumEstacoes</a> () const</td></tr>
 <tr class="separator:a1059ef01ee9ce85c37223a87c34133dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2ceb58882f472e8d9af3b7cbd156e92b"><td class="memItemLeft" align="right" valign="top"><a id="a2ceb58882f472e8d9af3b7cbd156e92b" name="a2ceb58882f472e8d9af3b7cbd156e92b"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>MaxFlowSubGraph</b> (string EstacaoA, string EstacaoB)</td></tr>
-<tr class="separator:a2ceb58882f472e8d9af3b7cbd156e92b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -127,7 +127,7 @@ list&lt; list&lt; string &gt; &gt;&#160;</td><td class="memItemRight" valign="bo
 <tr class="separator:a22af570c9b6a16f166f21f44837c9058"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p >Represents a <a class="el" href="class_graph.html">Graph</a>. </p>
+<div class="textblock"><p >Represents a <a class="el" href="class_graph.html" title="Represents a Graph.">Graph</a>. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="ace740bb45a156e7a4051593cac4290bb" name="ace740bb45a156e7a4051593cac4290bb"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ace740bb45a156e7a4051593cac4290bb">&#9670;&#160;</a></span>addEdge()</h2>
@@ -207,7 +207,7 @@ list&lt; list&lt; string &gt; &gt;&#160;</td><td class="memItemRight" valign="bo
       </table>
 </div><div class="memdoc">
 
-<p>Add a node to the <a class="el" href="class_graph.html">Graph</a> using the name of the station as a key and the whole "Estacao" class as the value. </p>
+<p>Add a node to the <a class="el" href="class_graph.html" title="Represents a Graph.">Graph</a> using the name of the station as a key and the whole "Estacao" class as the value. </p>
 <p >Time Complexity - O(|V| + |E|).</p>
 <p >V is the number of vertices/nodes and E is the number of edges/links. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -398,8 +398,8 @@ list&lt; list&lt; string &gt; &gt;&#160;</td><td class="memItemRight" valign="bo
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>include/<a class="el" href="_graph_8h_source.html">Graph.h</a></li>
-<li>src/Graph.cpp</li>
+<li>C:/Users/nando/Desktop/DA/DA_Projeto_1/include/<a class="el" href="_graph_8h_source.html">Graph.h</a></li>
+<li>C:/Users/nando/Desktop/DA/DA_Projeto_1/src/Graph.cpp</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

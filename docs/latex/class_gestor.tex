@@ -2,12 +2,17 @@
 \label{class_gestor}\index{Gestor@{Gestor}}
 
 
+Represents the manager class used to connect the other classes with the user interface.  
+
+
+
+
 {\ttfamily \#include $<$Gestor.\+h$>$}
 
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_gestor_a63ab3a451dcedb416578c35b5d57aca4}{Gestor}} ()
+\mbox{\hyperlink{class_gestor_aaca1ba447a4a79888de1a131302703aa}{Gestor}} (string linha)
 \begin{DoxyCompactList}\small\item\em Creates a new manager. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_gestor_a0838e28ba59307a26b6d7095ef56cf58}\label{class_gestor_a0838e28ba59307a26b6d7095ef56cf58}} 
 void {\bfseries Mostrar\+Estacoes} ()
@@ -21,15 +26,14 @@ int \mbox{\hyperlink{class_gestor_a347d16354cbf77bfe541e0e5ef6342ee}{max\+Flow}}
 \begin{DoxyCompactList}\small\item\em Calculates the max flow between a source station and a target station. \end{DoxyCompactList}\item 
 list$<$ pair$<$ string, string $>$ $>$ \mbox{\hyperlink{class_gestor_a869bfa5d44683336e72934ea2785e411}{topestacoes}} ()
 \begin{DoxyCompactList}\small\item\em Prints the top 4 pair of stations with the most amount of trains traveling between them. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_gestor_ac26fc38085322536ffe3f882948f761a}{Trans\+Needs}} ()
+void \mbox{\hyperlink{class_gestor_a8053bdc6b390c53740612ba8ccc1145c}{Trans\+Needs\+\_\+\+Dist}} ()
 \begin{DoxyCompactList}\small\item\em Displays the \char`\"{}n\char`\"{} number of districts with the most transportation needs. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{class_gestor_a80e9add688d911a2a3d6f0e66be738c1}\label{class_gestor_a80e9add688d911a2a3d6f0e66be738c1}} 
-void {\bfseries Max\+Flow\+Sub\+Graph} (string EstacaoA, string EstacaoB)
-\end{DoxyCompactItemize}
+void \mbox{\hyperlink{class_gestor_a9943a761c735fba3c5c41dcc8f4843d0}{Trans\+Needs\+\_\+\+Mun}} ()
+\begin{DoxyCompactList}\small\item\em Displays the \char`\"{}n\char`\"{} number of Municipalities with the most transportation needs. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{class_gestor_a27ac62bc2c3fae4062aff6dc98e2e7c9}{Ler\+Ficheiros}} ()
+void \mbox{\hyperlink{class_gestor_a1dfac48260ef58e3c82e0db20c9b21e9}{Ler\+Ficheiros}} (std\+::string linha)
 \begin{DoxyCompactList}\small\item\em Reads all the data saved in the files and stores them in the correct structures. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
@@ -39,18 +43,21 @@ void \mbox{\hyperlink{class_gestor_a27ac62bc2c3fae4062aff6dc98e2e7c9}{Ler\+Fiche
 \begin{DoxyCompactList}\small\item\em A pointer to the network graph which contains all info about the train network. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_gestor_a3607d192a8467b667446345f50942145}\label{class_gestor_a3607d192a8467b667446345f50942145}} 
 vector$<$ \mbox{\hyperlink{class_district}{District}} $>$ {\bfseries distritos}
-\begin{DoxyCompactList}\small\item\em A vector that stores all of the station\textquotesingle{}s district information. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em A vector that stores all of the station\textquotesingle{}s district information. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_gestor_ae8d2571c93b2eb810d4c35a99c79c9b2}\label{class_gestor_ae8d2571c93b2eb810d4c35a99c79c9b2}} 
+vector$<$ \mbox{\hyperlink{class_municipality}{Municipality}} $>$ {\bfseries municip}
+\begin{DoxyCompactList}\small\item\em A set that stores all of the station\textquotesingle{}s municipality information. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 Represents the manager class used to connect the other classes with the user interface. 
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{class_gestor_a63ab3a451dcedb416578c35b5d57aca4}\label{class_gestor_a63ab3a451dcedb416578c35b5d57aca4}} 
+\mbox{\Hypertarget{class_gestor_aaca1ba447a4a79888de1a131302703aa}\label{class_gestor_aaca1ba447a4a79888de1a131302703aa}} 
 \index{Gestor@{Gestor}!Gestor@{Gestor}}
 \index{Gestor@{Gestor}!Gestor@{Gestor}}
 \doxysubsubsection{\texorpdfstring{Gestor()}{Gestor()}}
-{\footnotesize\ttfamily Gestor\+::\+Gestor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily Gestor\+::\+Gestor (\begin{DoxyParamCaption}\item[{string}]{linha }\end{DoxyParamCaption})}
 
 
 
@@ -59,11 +66,11 @@ Creates a new manager.
 Constructor of the \char`\"{}\+Gestor\char`\"{} class. 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{class_gestor_a27ac62bc2c3fae4062aff6dc98e2e7c9}\label{class_gestor_a27ac62bc2c3fae4062aff6dc98e2e7c9}} 
+\mbox{\Hypertarget{class_gestor_a1dfac48260ef58e3c82e0db20c9b21e9}\label{class_gestor_a1dfac48260ef58e3c82e0db20c9b21e9}} 
 \index{Gestor@{Gestor}!LerFicheiros@{LerFicheiros}}
 \index{LerFicheiros@{LerFicheiros}!Gestor@{Gestor}}
 \doxysubsubsection{\texorpdfstring{LerFicheiros()}{LerFicheiros()}}
-{\footnotesize\ttfamily void Gestor\+::\+Ler\+Ficheiros (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily void Gestor\+::\+Ler\+Ficheiros (\begin{DoxyParamCaption}\item[{std\+::string}]{linha }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
@@ -122,11 +129,11 @@ Prints the top 4 pair of stations with the most amount of trains traveling betwe
 Time Complexity -\/ O(\+V$^\wedge$2(\+VE$^\wedge$2)). \begin{DoxyReturn}{Returns}
 List of pairs of stations. 
 \end{DoxyReturn}
-\mbox{\Hypertarget{class_gestor_ac26fc38085322536ffe3f882948f761a}\label{class_gestor_ac26fc38085322536ffe3f882948f761a}} 
-\index{Gestor@{Gestor}!TransNeeds@{TransNeeds}}
-\index{TransNeeds@{TransNeeds}!Gestor@{Gestor}}
-\doxysubsubsection{\texorpdfstring{TransNeeds()}{TransNeeds()}}
-{\footnotesize\ttfamily void Gestor\+::\+Trans\+Needs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{class_gestor_a8053bdc6b390c53740612ba8ccc1145c}\label{class_gestor_a8053bdc6b390c53740612ba8ccc1145c}} 
+\index{Gestor@{Gestor}!TransNeeds\_Dist@{TransNeeds\_Dist}}
+\index{TransNeeds\_Dist@{TransNeeds\_Dist}!Gestor@{Gestor}}
+\doxysubsubsection{\texorpdfstring{TransNeeds\_Dist()}{TransNeeds\_Dist()}}
+{\footnotesize\ttfamily void Gestor\+::\+Trans\+Needs\+\_\+\+Dist (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
@@ -139,9 +146,26 @@ N is the number of districts.
 {\em n} & Number of districts to analyze. \\
 \hline
 \end{DoxyParams}
+\mbox{\Hypertarget{class_gestor_a9943a761c735fba3c5c41dcc8f4843d0}\label{class_gestor_a9943a761c735fba3c5c41dcc8f4843d0}} 
+\index{Gestor@{Gestor}!TransNeeds\_Mun@{TransNeeds\_Mun}}
+\index{TransNeeds\_Mun@{TransNeeds\_Mun}!Gestor@{Gestor}}
+\doxysubsubsection{\texorpdfstring{TransNeeds\_Mun()}{TransNeeds\_Mun()}}
+{\footnotesize\ttfamily void Gestor\+::\+Trans\+Needs\+\_\+\+Mun (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Displays the \char`\"{}n\char`\"{} number of Municipalities with the most transportation needs. 
+
+Time Complexity -\/ O(\+Nlog(\+N))
+
+N is the number of municipalities. 
+\begin{DoxyParams}{Parameters}
+{\em n} & Number of districts to analyze. \\
+\hline
+\end{DoxyParams}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-include/Gestor.\+h\item 
-src/Gestor.\+cpp\end{DoxyCompactItemize}
+C\+:/\+Users/nando/\+Desktop/\+DA/\+DA\+\_\+\+Projeto\+\_\+1/include/Gestor.\+h\item 
+C\+:/\+Users/nando/\+Desktop/\+DA/\+DA\+\_\+\+Projeto\+\_\+1/src/Gestor.\+cpp\end{DoxyCompactItemize}

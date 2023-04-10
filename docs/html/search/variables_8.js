@@ -1,5 +1,8 @@
 var searchData=
 [
-  ['parent_0',['parent',['../struct_graph_1_1_node.html#a8d84904a8e50fae551a784b90dae9777',1,'Graph::Node']]],
-  ['path_1',['path',['../struct_graph_1_1_node.html#a9914010f9a00b3aaa867f960aac552ea',1,'Graph::Node']]]
+  ['network_5f_0',['network_',['../class_gestor.html#a5fe56ae085e4d2b1d81e8f0b2fa8c458',1,'Gestor']]],
+  ['nodes_1',['nodes',['../class_graph.html#a70b682ea94e98ca989eb2ba8867846b5',1,'Graph']]],
+  ['nome_5f_2',['nome_',['../class_estacao.html#ad33ed4a89d36ac82899cbfecc064bfdd',1,'Estacao']]],
+  ['nome_5fdist_3',['nome_dist',['../class_district.html#a787906b04a08f7719be4051b31931e34',1,'District']]],
+  ['nome_5fmun_4',['nome_mun',['../class_municipality.html#a0e330ab3f39d8fdaeb2927f10d111693',1,'Municipality']]]
 ];

@@ -1,5 +1,5 @@
 \hypertarget{_estacao_8h_source}{}\doxysection{Estacao.\+h}
-\label{_estacao_8h_source}\index{include/Estacao.h@{include/Estacao.h}}
+\label{_estacao_8h_source}\index{C:/Users/nando/Desktop/DA/DA\_Projeto\_1/include/Estacao.h@{C:/Users/nando/Desktop/DA/DA\_Projeto\_1/include/Estacao.h}}
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{1 }
@@ -20,32 +20,48 @@
 \DoxyCodeLine{42     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_district_ab7387d71380780268d7e691cc1972ef4}{setCapacidade}}(\textcolor{keywordtype}{int} n);}
 \DoxyCodeLine{47     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_district_aa316ebbabe00050e2597fc342012c59e}{updateCapacidade}}(\textcolor{keywordtype}{int} n);}
 \DoxyCodeLine{54     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_district_adde73ae03db85166919f0991716aab7c}{operator<}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_district}{District}} \&dist);}
-\DoxyCodeLine{55 \};}
+\DoxyCodeLine{55 }
 \DoxyCodeLine{56 }
-\DoxyCodeLine{60 \textcolor{keyword}{class }\mbox{\hyperlink{class_estacao}{Estacao}}}
-\DoxyCodeLine{61 \{}
-\DoxyCodeLine{62     \textcolor{keyword}{private}:}
-\DoxyCodeLine{67     std::string \mbox{\hyperlink{class_estacao_ad33ed4a89d36ac82899cbfecc064bfdd}{nome\_}};}
-\DoxyCodeLine{71     \mbox{\hyperlink{class_district}{District}} \mbox{\hyperlink{class_estacao_a18f4dbe143632f6aaea901e6bc8e8cf7}{distrito\_}};}
-\DoxyCodeLine{75     std::string \mbox{\hyperlink{class_estacao_abaa049c439fe94c637ea88cfcb2eba4c}{concelho\_}};}
-\DoxyCodeLine{79     std::string \mbox{\hyperlink{class_estacao_a4e4a7057ed99914c1d4c7bf1ed2048bc}{localidade\_}};}
-\DoxyCodeLine{83     std::string \mbox{\hyperlink{class_estacao_a4fc7e31f57b61e2a88e1ceb128fdc2bf}{linha\_}};}
-\DoxyCodeLine{84 }
-\DoxyCodeLine{85     \textcolor{keyword}{public}:}
-\DoxyCodeLine{95     \mbox{\hyperlink{class_estacao}{Estacao}}(\textcolor{keyword}{const} std::string nome, \textcolor{keyword}{const} \mbox{\hyperlink{class_district}{District}} distrito, \textcolor{keyword}{const} std::string concelho, \textcolor{keyword}{const} std::string localidade, \textcolor{keyword}{const} std::string linha);}
-\DoxyCodeLine{100     std::string \mbox{\hyperlink{class_estacao_a3c73e1fb8e2fa6164cc97f5d5445e511}{getNome}}() \textcolor{keyword}{const};}
-\DoxyCodeLine{105     \mbox{\hyperlink{class_district}{District}} \mbox{\hyperlink{class_estacao_a34280ee300bcd08308179b75b8e72afa}{getDistrito}}() \textcolor{keyword}{const};}
-\DoxyCodeLine{110     std::string \mbox{\hyperlink{class_estacao_aafc4f216d25ce7f25ae3792e8ba64d62}{getConcelho}}() \textcolor{keyword}{const};}
-\DoxyCodeLine{115     std::string \mbox{\hyperlink{class_estacao_a8d184b37d2c686850b9ae075438683d2}{getLocalidade}}() \textcolor{keyword}{const};}
-\DoxyCodeLine{120     std::string \mbox{\hyperlink{class_estacao_a98bdc44a2d8eac280b849b3953497776}{getLinha}}() \textcolor{keyword}{const};}
-\DoxyCodeLine{127     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_estacao_a79f751f3947e9ce13dc41578aee67643}{operator==}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_estacao}{Estacao}} \&estacao) \textcolor{keyword}{const};}
-\DoxyCodeLine{128 \};}
-\DoxyCodeLine{129 }
-\DoxyCodeLine{130 }
-\DoxyCodeLine{131 }
-\DoxyCodeLine{132 }
-\DoxyCodeLine{133 }
-\DoxyCodeLine{134 }
-\DoxyCodeLine{135 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//DA\_PROJETO\_1\_ESTACAO\_H}}
+\DoxyCodeLine{57 \};}
+\DoxyCodeLine{58 }
+\DoxyCodeLine{62 \textcolor{keyword}{class }\mbox{\hyperlink{class_municipality}{Municipality}}\{}
+\DoxyCodeLine{63 \textcolor{keyword}{private}:}
+\DoxyCodeLine{67     std::string \mbox{\hyperlink{class_municipality_a0e330ab3f39d8fdaeb2927f10d111693}{nome\_mun}};}
+\DoxyCodeLine{72     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_municipality_a058bdb9f0a12682a315e18ea45f1dbd7}{captotal}};}
+\DoxyCodeLine{73 \textcolor{keyword}{public}:}
+\DoxyCodeLine{78     std::string \mbox{\hyperlink{class_municipality_afd819e571da6a33fcde3cbcbe659a432}{Mun\_getNome}}();}
+\DoxyCodeLine{83     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_municipality_ae982b2ded58ea17dc778b33652e7efe6}{Mun\_getCapacidade}}();}
+\DoxyCodeLine{88     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_municipality_ab1148e3ff771441cae08a5dd3c1026b2}{Mun\_setNome}}(std::string n);}
+\DoxyCodeLine{93     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_municipality_a8076fd5da222f6c6c76a3910d74ef5e9}{Mun\_setCapacidade}}(\textcolor{keywordtype}{int} n);}
+\DoxyCodeLine{98     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_municipality_afceb12b7db973850b81869f6fed29218}{Mun\_updateCapacidade}}(\textcolor{keywordtype}{int} n);}
+\DoxyCodeLine{105     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_municipality_a248912804208ea9543c7430ce5b23b8c}{operator<}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_municipality}{Municipality}} \&mun);}
+\DoxyCodeLine{112     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_municipality_a8a9095b27cc8b063d1e8bfd64d37a21c}{operator==}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_municipality}{Municipality}} \&mun);}
+\DoxyCodeLine{113 \};}
+\DoxyCodeLine{114 }
+\DoxyCodeLine{118 \textcolor{keyword}{class }\mbox{\hyperlink{class_estacao}{Estacao}}}
+\DoxyCodeLine{119 \{}
+\DoxyCodeLine{120     \textcolor{keyword}{private}:}
+\DoxyCodeLine{125     std::string \mbox{\hyperlink{class_estacao_ad33ed4a89d36ac82899cbfecc064bfdd}{nome\_}};}
+\DoxyCodeLine{129     \mbox{\hyperlink{class_district}{District}} \mbox{\hyperlink{class_estacao_a18f4dbe143632f6aaea901e6bc8e8cf7}{distrito\_}};}
+\DoxyCodeLine{133     \mbox{\hyperlink{class_municipality}{Municipality}} \mbox{\hyperlink{class_estacao_a9941773eecd4f343e728e22b8bc2ffc2}{concelho\_}};}
+\DoxyCodeLine{137     std::string \mbox{\hyperlink{class_estacao_a4e4a7057ed99914c1d4c7bf1ed2048bc}{localidade\_}};}
+\DoxyCodeLine{141     std::string \mbox{\hyperlink{class_estacao_a4fc7e31f57b61e2a88e1ceb128fdc2bf}{linha\_}};}
+\DoxyCodeLine{142 }
+\DoxyCodeLine{143     \textcolor{keyword}{public}:}
+\DoxyCodeLine{153     \mbox{\hyperlink{class_estacao}{Estacao}}(\textcolor{keyword}{const} std::string nome, \textcolor{keyword}{const} \mbox{\hyperlink{class_district}{District}} distrito, \textcolor{keyword}{const} \mbox{\hyperlink{class_municipality}{Municipality}} concelho, \textcolor{keyword}{const} std::string localidade, \textcolor{keyword}{const} std::string linha);}
+\DoxyCodeLine{158     std::string \mbox{\hyperlink{class_estacao_a3c73e1fb8e2fa6164cc97f5d5445e511}{getNome}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{163     \mbox{\hyperlink{class_district}{District}} \mbox{\hyperlink{class_estacao_a34280ee300bcd08308179b75b8e72afa}{getDistrito}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{168     \mbox{\hyperlink{class_municipality}{Municipality}} \mbox{\hyperlink{class_estacao_a0b8338ef855e99d65c909ae6aae73908}{getConcelho}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{173     std::string \mbox{\hyperlink{class_estacao_a8d184b37d2c686850b9ae075438683d2}{getLocalidade}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{178     std::string \mbox{\hyperlink{class_estacao_a98bdc44a2d8eac280b849b3953497776}{getLinha}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{185     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_estacao_a79f751f3947e9ce13dc41578aee67643}{operator==}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_estacao}{Estacao}} \&estacao) \textcolor{keyword}{const};}
+\DoxyCodeLine{186 \};}
+\DoxyCodeLine{187 }
+\DoxyCodeLine{188 }
+\DoxyCodeLine{189 }
+\DoxyCodeLine{190 }
+\DoxyCodeLine{191 }
+\DoxyCodeLine{192 }
+\DoxyCodeLine{193 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//DA\_PROJETO\_1\_ESTACAO\_H}}
 
 \end{DoxyCode}

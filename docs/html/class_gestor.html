@@ -78,13 +78,16 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>Represents the manager class used to connect the other classes with the user interface.  
+ <a href="class_gestor.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_gestor_8h_source.html">Gestor.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a63ab3a451dcedb416578c35b5d57aca4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_gestor.html#a63ab3a451dcedb416578c35b5d57aca4">Gestor</a> ()</td></tr>
-<tr class="memdesc:a63ab3a451dcedb416578c35b5d57aca4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new manager.  <a href="class_gestor.html#a63ab3a451dcedb416578c35b5d57aca4">More...</a><br /></td></tr>
-<tr class="separator:a63ab3a451dcedb416578c35b5d57aca4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaca1ba447a4a79888de1a131302703aa"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_gestor.html#aaca1ba447a4a79888de1a131302703aa">Gestor</a> (string linha)</td></tr>
+<tr class="memdesc:aaca1ba447a4a79888de1a131302703aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new manager.  <a href="class_gestor.html#aaca1ba447a4a79888de1a131302703aa">More...</a><br /></td></tr>
+<tr class="separator:aaca1ba447a4a79888de1a131302703aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0838e28ba59307a26b6d7095ef56cf58"><td class="memItemLeft" align="right" valign="top"><a id="a0838e28ba59307a26b6d7095ef56cf58" name="a0838e28ba59307a26b6d7095ef56cf58"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>MostrarEstacoes</b> ()</td></tr>
 <tr class="memdesc:a0838e28ba59307a26b6d7095ef56cf58"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints all of the stored stations. <br /></td></tr>
@@ -102,18 +105,18 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>MostrarNetwork</b> ()
 <tr class="memitem:a869bfa5d44683336e72934ea2785e411"><td class="memItemLeft" align="right" valign="top">list&lt; pair&lt; string, string &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_gestor.html#a869bfa5d44683336e72934ea2785e411">topestacoes</a> ()</td></tr>
 <tr class="memdesc:a869bfa5d44683336e72934ea2785e411"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints the top 4 pair of stations with the most amount of trains traveling between them.  <a href="class_gestor.html#a869bfa5d44683336e72934ea2785e411">More...</a><br /></td></tr>
 <tr class="separator:a869bfa5d44683336e72934ea2785e411"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac26fc38085322536ffe3f882948f761a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_gestor.html#ac26fc38085322536ffe3f882948f761a">TransNeeds</a> ()</td></tr>
-<tr class="memdesc:ac26fc38085322536ffe3f882948f761a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Displays the "n" number of districts with the most transportation needs.  <a href="class_gestor.html#ac26fc38085322536ffe3f882948f761a">More...</a><br /></td></tr>
-<tr class="separator:ac26fc38085322536ffe3f882948f761a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a80e9add688d911a2a3d6f0e66be738c1"><td class="memItemLeft" align="right" valign="top"><a id="a80e9add688d911a2a3d6f0e66be738c1" name="a80e9add688d911a2a3d6f0e66be738c1"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>MaxFlowSubGraph</b> (string EstacaoA, string EstacaoB)</td></tr>
-<tr class="separator:a80e9add688d911a2a3d6f0e66be738c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8053bdc6b390c53740612ba8ccc1145c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_gestor.html#a8053bdc6b390c53740612ba8ccc1145c">TransNeeds_Dist</a> ()</td></tr>
+<tr class="memdesc:a8053bdc6b390c53740612ba8ccc1145c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Displays the "n" number of districts with the most transportation needs.  <a href="class_gestor.html#a8053bdc6b390c53740612ba8ccc1145c">More...</a><br /></td></tr>
+<tr class="separator:a8053bdc6b390c53740612ba8ccc1145c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9943a761c735fba3c5c41dcc8f4843d0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_gestor.html#a9943a761c735fba3c5c41dcc8f4843d0">TransNeeds_Mun</a> ()</td></tr>
+<tr class="memdesc:a9943a761c735fba3c5c41dcc8f4843d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Displays the "n" number of Municipalities with the most transportation needs.  <a href="class_gestor.html#a9943a761c735fba3c5c41dcc8f4843d0">More...</a><br /></td></tr>
+<tr class="separator:a9943a761c735fba3c5c41dcc8f4843d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
-<tr class="memitem:a27ac62bc2c3fae4062aff6dc98e2e7c9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_gestor.html#a27ac62bc2c3fae4062aff6dc98e2e7c9">LerFicheiros</a> ()</td></tr>
-<tr class="memdesc:a27ac62bc2c3fae4062aff6dc98e2e7c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads all the data saved in the files and stores them in the correct structures.  <a href="class_gestor.html#a27ac62bc2c3fae4062aff6dc98e2e7c9">More...</a><br /></td></tr>
-<tr class="separator:a27ac62bc2c3fae4062aff6dc98e2e7c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1dfac48260ef58e3c82e0db20c9b21e9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_gestor.html#a1dfac48260ef58e3c82e0db20c9b21e9">LerFicheiros</a> (std::string linha)</td></tr>
+<tr class="memdesc:a1dfac48260ef58e3c82e0db20c9b21e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads all the data saved in the files and stores them in the correct structures.  <a href="class_gestor.html#a1dfac48260ef58e3c82e0db20c9b21e9">More...</a><br /></td></tr>
+<tr class="separator:a1dfac48260ef58e3c82e0db20c9b21e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -125,12 +128,16 @@ Private Attributes</h2></td></tr>
 vector&lt; <a class="el" href="class_district.html">District</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>distritos</b></td></tr>
 <tr class="memdesc:a3607d192a8467b667446345f50942145"><td class="mdescLeft">&#160;</td><td class="mdescRight">A vector that stores all of the station's district information. <br /></td></tr>
 <tr class="separator:a3607d192a8467b667446345f50942145"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8d2571c93b2eb810d4c35a99c79c9b2"><td class="memItemLeft" align="right" valign="top"><a id="ae8d2571c93b2eb810d4c35a99c79c9b2" name="ae8d2571c93b2eb810d4c35a99c79c9b2"></a>
+vector&lt; <a class="el" href="class_municipality.html">Municipality</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>municip</b></td></tr>
+<tr class="memdesc:ae8d2571c93b2eb810d4c35a99c79c9b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">A set that stores all of the station's municipality information. <br /></td></tr>
+<tr class="separator:ae8d2571c93b2eb810d4c35a99c79c9b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Represents the manager class used to connect the other classes with the user interface. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a63ab3a451dcedb416578c35b5d57aca4" name="a63ab3a451dcedb416578c35b5d57aca4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a63ab3a451dcedb416578c35b5d57aca4">&#9670;&#160;</a></span>Gestor()</h2>
+<a id="aaca1ba447a4a79888de1a131302703aa" name="aaca1ba447a4a79888de1a131302703aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaca1ba447a4a79888de1a131302703aa">&#9670;&#160;</a></span>Gestor()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -138,7 +145,8 @@ vector&lt; <a class="el" href="class_district.html">District</a> &gt;&#160;</td>
         <tr>
           <td class="memname">Gestor::Gestor </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>linha</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -150,8 +158,8 @@ vector&lt; <a class="el" href="class_district.html">District</a> &gt;&#160;</td>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a27ac62bc2c3fae4062aff6dc98e2e7c9" name="a27ac62bc2c3fae4062aff6dc98e2e7c9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a27ac62bc2c3fae4062aff6dc98e2e7c9">&#9670;&#160;</a></span>LerFicheiros()</h2>
+<a id="a1dfac48260ef58e3c82e0db20c9b21e9" name="a1dfac48260ef58e3c82e0db20c9b21e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1dfac48260ef58e3c82e0db20c9b21e9">&#9670;&#160;</a></span>LerFicheiros()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -162,7 +170,8 @@ vector&lt; <a class="el" href="class_district.html">District</a> &gt;&#160;</td>
         <tr>
           <td class="memname">void Gestor::LerFicheiros </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>linha</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -264,14 +273,14 @@ vector&lt; <a class="el" href="class_district.html">District</a> &gt;&#160;</td>
 
 </div>
 </div>
-<a id="ac26fc38085322536ffe3f882948f761a" name="ac26fc38085322536ffe3f882948f761a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac26fc38085322536ffe3f882948f761a">&#9670;&#160;</a></span>TransNeeds()</h2>
+<a id="a8053bdc6b390c53740612ba8ccc1145c" name="a8053bdc6b390c53740612ba8ccc1145c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8053bdc6b390c53740612ba8ccc1145c">&#9670;&#160;</a></span>TransNeeds_Dist()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void Gestor::TransNeeds </td>
+          <td class="memname">void Gestor::TransNeeds_Dist </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -290,9 +299,35 @@ vector&lt; <a class="el" href="class_district.html">District</a> &gt;&#160;</td>
 
 </div>
 </div>
+<a id="a9943a761c735fba3c5c41dcc8f4843d0" name="a9943a761c735fba3c5c41dcc8f4843d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9943a761c735fba3c5c41dcc8f4843d0">&#9670;&#160;</a></span>TransNeeds_Mun()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Gestor::TransNeeds_Mun </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Displays the "n" number of Municipalities with the most transportation needs. </p>
+<p >Time Complexity - O(Nlog(N))</p>
+<p >N is the number of municipalities. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">n</td><td>Number of districts to analyze. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>include/<a class="el" href="_gestor_8h_source.html">Gestor.h</a></li>
-<li>src/Gestor.cpp</li>
+<li>C:/Users/nando/Desktop/DA/DA_Projeto_1/include/<a class="el" href="_gestor_8h_source.html">Gestor.h</a></li>
+<li>C:/Users/nando/Desktop/DA/DA_Projeto_1/src/Gestor.cpp</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

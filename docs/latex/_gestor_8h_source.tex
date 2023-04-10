@@ -1,5 +1,5 @@
 \hypertarget{_gestor_8h_source}{}\doxysection{Gestor.\+h}
-\label{_gestor_8h_source}\index{include/Gestor.h@{include/Gestor.h}}
+\label{_gestor_8h_source}\index{C:/Users/nando/Desktop/DA/DA\_Projeto\_1/include/Gestor.h@{C:/Users/nando/Desktop/DA/DA\_Projeto\_1/include/Gestor.h}}
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{1 \textcolor{preprocessor}{\#include "{}../include/Estacao.h"{}}}
@@ -13,18 +13,18 @@
 \DoxyCodeLine{12 \textcolor{keyword}{private}:}
 \DoxyCodeLine{16     \mbox{\hyperlink{class_graph}{Graph}}* \mbox{\hyperlink{class_gestor_a5fe56ae085e4d2b1d81e8f0b2fa8c458}{network\_}};}
 \DoxyCodeLine{20     vector<District> \mbox{\hyperlink{class_gestor_a3607d192a8467b667446345f50942145}{distritos}};}
-\DoxyCodeLine{25     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_gestor_a27ac62bc2c3fae4062aff6dc98e2e7c9}{LerFicheiros}}();}
-\DoxyCodeLine{26 \textcolor{keyword}{public}:}
-\DoxyCodeLine{31     \mbox{\hyperlink{class_gestor_a63ab3a451dcedb416578c35b5d57aca4}{Gestor}}();}
-\DoxyCodeLine{35     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_gestor_a0838e28ba59307a26b6d7095ef56cf58}{MostrarEstacoes}}();}
-\DoxyCodeLine{39     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_gestor_a38686a9f22af58917c8bcd027a9881c4}{MostrarNetwork}}();}
-\DoxyCodeLine{46     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_gestor_a198767f6bd46770cbf323575c15f0265}{MaxArrivingTrains}}(\textcolor{keywordtype}{string} station);}
-\DoxyCodeLine{55     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_gestor_a347d16354cbf77bfe541e0e5ef6342ee}{maxFlow}}(\textcolor{keyword}{const} \textcolor{keywordtype}{string} source,\textcolor{keyword}{const} \textcolor{keywordtype}{string} target);}
-\DoxyCodeLine{61     list<pair<string,string>> \mbox{\hyperlink{class_gestor_a869bfa5d44683336e72934ea2785e411}{topestacoes}}();}
-\DoxyCodeLine{68     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_gestor_ac26fc38085322536ffe3f882948f761a}{TransNeeds}}();}
-\DoxyCodeLine{69 }
-\DoxyCodeLine{70     \textcolor{keywordtype}{void} MaxFlowSubGraph(\textcolor{keywordtype}{string} EstacaoA, \textcolor{keywordtype}{string} EstacaoB);}
-\DoxyCodeLine{71 \};}
-\DoxyCodeLine{72 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//DA\_PROJETO\_1\_GESTOR\_H}}
+\DoxyCodeLine{24     vector<Municipality> \mbox{\hyperlink{class_gestor_ae8d2571c93b2eb810d4c35a99c79c9b2}{municip}};}
+\DoxyCodeLine{29     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_gestor_a1dfac48260ef58e3c82e0db20c9b21e9}{LerFicheiros}}(std::string linha);}
+\DoxyCodeLine{30 \textcolor{keyword}{public}:}
+\DoxyCodeLine{35     \mbox{\hyperlink{class_gestor}{Gestor}}(\textcolor{keywordtype}{string} linha);}
+\DoxyCodeLine{39     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_gestor_a0838e28ba59307a26b6d7095ef56cf58}{MostrarEstacoes}}();}
+\DoxyCodeLine{43     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_gestor_a38686a9f22af58917c8bcd027a9881c4}{MostrarNetwork}}();}
+\DoxyCodeLine{50     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_gestor_a198767f6bd46770cbf323575c15f0265}{MaxArrivingTrains}}(\textcolor{keywordtype}{string} station);}
+\DoxyCodeLine{59     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_gestor_a347d16354cbf77bfe541e0e5ef6342ee}{maxFlow}}(\textcolor{keyword}{const} \textcolor{keywordtype}{string} source,\textcolor{keyword}{const} \textcolor{keywordtype}{string} target);}
+\DoxyCodeLine{65     list<pair<string,string>> \mbox{\hyperlink{class_gestor_a869bfa5d44683336e72934ea2785e411}{topestacoes}}();}
+\DoxyCodeLine{72     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_gestor_a8053bdc6b390c53740612ba8ccc1145c}{TransNeeds\_Dist}}();}
+\DoxyCodeLine{79     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_gestor_a9943a761c735fba3c5c41dcc8f4843d0}{TransNeeds\_Mun}}();}
+\DoxyCodeLine{80 \};}
+\DoxyCodeLine{81 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//DA\_PROJETO\_1\_GESTOR\_H}}
 
 \end{DoxyCode}

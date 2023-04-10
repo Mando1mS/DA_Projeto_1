@@ -9,5 +9,13 @@ var searchData=
   ['menuneeds_6',['MenuNeeds',['../class_menu.html#a9e1345a13a5621f8b87712020eab9cd4',1,'Menu']]],
   ['menuviz_7',['MenuViz',['../class_menu.html#a9d509f72adf55ca7e0a447d193f155d3',1,'Menu']]],
   ['mostrarestacoes_8',['MostrarEstacoes',['../class_gestor.html#a0838e28ba59307a26b6d7095ef56cf58',1,'Gestor']]],
-  ['mostrarnetwork_9',['MostrarNetwork',['../class_gestor.html#a38686a9f22af58917c8bcd027a9881c4',1,'Gestor']]]
+  ['mostrarnetwork_9',['MostrarNetwork',['../class_gestor.html#a38686a9f22af58917c8bcd027a9881c4',1,'Gestor']]],
+  ['mudarlinha_10',['MudarLinha',['../class_menu.html#a308c75f251db02aff24a50db14d3925e',1,'Menu']]],
+  ['mun_5fgetcapacidade_11',['Mun_getCapacidade',['../class_municipality.html#ae982b2ded58ea17dc778b33652e7efe6',1,'Municipality']]],
+  ['mun_5fgetnome_12',['Mun_getNome',['../class_municipality.html#afd819e571da6a33fcde3cbcbe659a432',1,'Municipality']]],
+  ['mun_5fsetcapacidade_13',['Mun_setCapacidade',['../class_municipality.html#a8076fd5da222f6c6c76a3910d74ef5e9',1,'Municipality']]],
+  ['mun_5fsetnome_14',['Mun_setNome',['../class_municipality.html#ab1148e3ff771441cae08a5dd3c1026b2',1,'Municipality']]],
+  ['mun_5fupdatecapacidade_15',['Mun_updateCapacidade',['../class_municipality.html#afceb12b7db973850b81869f6fed29218',1,'Municipality']]],
+  ['municip_16',['municip',['../class_gestor.html#ae8d2571c93b2eb810d4c35a99c79c9b2',1,'Gestor']]],
+  ['municipality_17',['Municipality',['../class_municipality.html',1,'']]]
 ];

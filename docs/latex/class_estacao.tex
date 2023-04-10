@@ -2,19 +2,24 @@
 \label{class_estacao}\index{Estacao@{Estacao}}
 
 
+Represents a station.  
+
+
+
+
 {\ttfamily \#include $<$Estacao.\+h$>$}
 
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_estacao_a62fd617b4b93f108d6c4390839fb91b7}{Estacao}} (const std\+::string nome, const \mbox{\hyperlink{class_district}{District}} distrito, const std\+::string concelho, const std\+::string localidade, const std\+::string linha)
+\mbox{\hyperlink{class_estacao_a9fa6f47c97b41e9a946fa9b8f32812e4}{Estacao}} (const std\+::string nome, const \mbox{\hyperlink{class_district}{District}} distrito, const \mbox{\hyperlink{class_municipality}{Municipality}} concelho, const std\+::string localidade, const std\+::string linha)
 \begin{DoxyCompactList}\small\item\em Creates a new station. \end{DoxyCompactList}\item 
 std\+::string \mbox{\hyperlink{class_estacao_a3c73e1fb8e2fa6164cc97f5d5445e511}{get\+Nome}} () const
 \begin{DoxyCompactList}\small\item\em Gets the name of the station. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_district}{District}} \mbox{\hyperlink{class_estacao_a34280ee300bcd08308179b75b8e72afa}{get\+Distrito}} () const
 \begin{DoxyCompactList}\small\item\em Gets the name of the \mbox{\hyperlink{class_district}{District}} the station belongs to. \end{DoxyCompactList}\item 
-std\+::string \mbox{\hyperlink{class_estacao_aafc4f216d25ce7f25ae3792e8ba64d62}{get\+Concelho}} () const
-\begin{DoxyCompactList}\small\item\em Gets the name of the Municipality the station belongs to. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_municipality}{Municipality}} \mbox{\hyperlink{class_estacao_a0b8338ef855e99d65c909ae6aae73908}{get\+Concelho}} () const
+\begin{DoxyCompactList}\small\item\em Gets the name of the \mbox{\hyperlink{class_municipality}{Municipality}} the station belongs to. \end{DoxyCompactList}\item 
 std\+::string \mbox{\hyperlink{class_estacao_a8d184b37d2c686850b9ae075438683d2}{get\+Localidade}} () const
 \begin{DoxyCompactList}\small\item\em Gets the name of the Township the station belongs to. \end{DoxyCompactList}\item 
 std\+::string \mbox{\hyperlink{class_estacao_a98bdc44a2d8eac280b849b3953497776}{get\+Linha}} () const
@@ -29,9 +34,9 @@ std\+::string \mbox{\hyperlink{class_estacao_ad33ed4a89d36ac82899cbfecc064bfdd}{
 \mbox{\Hypertarget{class_estacao_a18f4dbe143632f6aaea901e6bc8e8cf7}\label{class_estacao_a18f4dbe143632f6aaea901e6bc8e8cf7}} 
 \mbox{\hyperlink{class_district}{District}} {\bfseries distrito\+\_\+}
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_district}{District}} the station belongs to. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{class_estacao_abaa049c439fe94c637ea88cfcb2eba4c}\label{class_estacao_abaa049c439fe94c637ea88cfcb2eba4c}} 
-std\+::string {\bfseries concelho\+\_\+}
-\begin{DoxyCompactList}\small\item\em Municipality the station belongs to. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_estacao_a9941773eecd4f343e728e22b8bc2ffc2}\label{class_estacao_a9941773eecd4f343e728e22b8bc2ffc2}} 
+\mbox{\hyperlink{class_municipality}{Municipality}} {\bfseries concelho\+\_\+}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_municipality}{Municipality}} the station belongs to. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_estacao_a4e4a7057ed99914c1d4c7bf1ed2048bc}\label{class_estacao_a4e4a7057ed99914c1d4c7bf1ed2048bc}} 
 std\+::string {\bfseries localidade\+\_\+}
 \begin{DoxyCompactList}\small\item\em Township the station belongs to. \end{DoxyCompactList}\item 
@@ -44,11 +49,11 @@ std\+::string {\bfseries linha\+\_\+}
 Represents a station. 
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{class_estacao_a62fd617b4b93f108d6c4390839fb91b7}\label{class_estacao_a62fd617b4b93f108d6c4390839fb91b7}} 
+\mbox{\Hypertarget{class_estacao_a9fa6f47c97b41e9a946fa9b8f32812e4}\label{class_estacao_a9fa6f47c97b41e9a946fa9b8f32812e4}} 
 \index{Estacao@{Estacao}!Estacao@{Estacao}}
 \index{Estacao@{Estacao}!Estacao@{Estacao}}
 \doxysubsubsection{\texorpdfstring{Estacao()}{Estacao()}}
-{\footnotesize\ttfamily Estacao\+::\+Estacao (\begin{DoxyParamCaption}\item[{const std\+::string}]{nome,  }\item[{const \mbox{\hyperlink{class_district}{District}}}]{distrito,  }\item[{const std\+::string}]{concelho,  }\item[{const std\+::string}]{localidade,  }\item[{const std\+::string}]{linha }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily Estacao\+::\+Estacao (\begin{DoxyParamCaption}\item[{const std\+::string}]{nome,  }\item[{const \mbox{\hyperlink{class_district}{District}}}]{distrito,  }\item[{const \mbox{\hyperlink{class_municipality}{Municipality}}}]{concelho,  }\item[{const std\+::string}]{localidade,  }\item[{const std\+::string}]{linha }\end{DoxyParamCaption})}
 
 
 
@@ -60,7 +65,7 @@ Constructor of the \char`\"{}\+Estacao\char`\"{} class.
 \hline
 {\em distrito} & \mbox{\hyperlink{class_district}{District}}. \\
 \hline
-{\em concelho} & Municipality. \\
+{\em concelho} & \mbox{\hyperlink{class_municipality}{Municipality}}. \\
 \hline
 {\em localidade} & Township. \\
 \hline
@@ -70,18 +75,18 @@ Constructor of the \char`\"{}\+Estacao\char`\"{} class.
 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{class_estacao_aafc4f216d25ce7f25ae3792e8ba64d62}\label{class_estacao_aafc4f216d25ce7f25ae3792e8ba64d62}} 
+\mbox{\Hypertarget{class_estacao_a0b8338ef855e99d65c909ae6aae73908}\label{class_estacao_a0b8338ef855e99d65c909ae6aae73908}} 
 \index{Estacao@{Estacao}!getConcelho@{getConcelho}}
 \index{getConcelho@{getConcelho}!Estacao@{Estacao}}
 \doxysubsubsection{\texorpdfstring{getConcelho()}{getConcelho()}}
-{\footnotesize\ttfamily std\+::string Estacao\+::get\+Concelho (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_municipality}{Municipality}} Estacao\+::get\+Concelho (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 
 
-Gets the name of the Municipality the station belongs to. 
+Gets the name of the \mbox{\hyperlink{class_municipality}{Municipality}} the station belongs to. 
 
 \begin{DoxyReturn}{Returns}
-Township\textquotesingle{}s name.. 
+\mbox{\hyperlink{class_municipality}{Municipality}}\textquotesingle{}s name. 
 \end{DoxyReturn}
 \mbox{\Hypertarget{class_estacao_a34280ee300bcd08308179b75b8e72afa}\label{class_estacao_a34280ee300bcd08308179b75b8e72afa}} 
 \index{Estacao@{Estacao}!getDistrito@{getDistrito}}
@@ -94,7 +99,7 @@ Township\textquotesingle{}s name..
 Gets the name of the \mbox{\hyperlink{class_district}{District}} the station belongs to. 
 
 \begin{DoxyReturn}{Returns}
-\mbox{\hyperlink{class_district}{District}}\textquotesingle{}s name.. 
+\mbox{\hyperlink{class_district}{District}}\textquotesingle{}s name. 
 \end{DoxyReturn}
 \mbox{\Hypertarget{class_estacao_a98bdc44a2d8eac280b849b3953497776}\label{class_estacao_a98bdc44a2d8eac280b849b3953497776}} 
 \index{Estacao@{Estacao}!getLinha@{getLinha}}
@@ -133,7 +138,7 @@ Township\textquotesingle{}s name.
 Gets the name of the station. 
 
 \begin{DoxyReturn}{Returns}
-Station\textquotesingle{}s name.. 
+Station\textquotesingle{}s name. 
 \end{DoxyReturn}
 \mbox{\Hypertarget{class_estacao_a79f751f3947e9ce13dc41578aee67643}\label{class_estacao_a79f751f3947e9ce13dc41578aee67643}} 
 \index{Estacao@{Estacao}!operator==@{operator==}}
@@ -172,5 +177,5 @@ The name of the station is unique and so it is possible to identify which statio
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-include/Estacao.\+h\item 
-src/Estacao.\+cpp\end{DoxyCompactItemize}
+C\+:/\+Users/nando/\+Desktop/\+DA/\+DA\+\_\+\+Projeto\+\_\+1/include/Estacao.\+h\item 
+C\+:/\+Users/nando/\+Desktop/\+DA/\+DA\+\_\+\+Projeto\+\_\+1/src/Estacao.\+cpp\end{DoxyCompactItemize}
