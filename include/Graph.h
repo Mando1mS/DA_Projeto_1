@@ -17,7 +17,7 @@
 
 using namespace std;
 /**
- * Represents a Graph.
+ * @brief Represents a Graph.
  */
 class Graph {
 private:

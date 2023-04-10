@@ -5,7 +5,7 @@
 #ifndef DA_PROJETO_1_GESTOR_H
 #define DA_PROJETO_1_GESTOR_H
 /**
- * Represents the manager class used to connect the other classes with the user interface.
+ * @brief Represents the manager class used to connect the other classes with the user interface.
  */
 class Gestor
 {
@@ -18,6 +18,10 @@ private:
      * @brief A vector that stores all of the station's district information.
      */
     vector<District> distritos;
+    /**
+     * @brief A set that stores all of the station's municipality information.
+     */
+    vector<Municipality> municip;
     /**
     * @brief Reads all the data saved in the files and stores them in the correct structures.
     * @details Time Complexity - O(n^3).
@@ -65,6 +69,13 @@ public:
      * @details N is the number of districts.
      * @param n Number of districts to analyze.
      */
-    void TransNeeds();
+    void TransNeeds_Dist();
+    /**
+     * @brief Displays the "n" number of Municipalities with the most transportation needs.
+     * @details Time Complexity - O(Nlog(N))
+     * @details N is the number of municipalities.
+     * @param n Number of districts to analyze.
+     */
+    void TransNeeds_Mun();
 };
 #endif //DA_PROJETO_1_GESTOR_H

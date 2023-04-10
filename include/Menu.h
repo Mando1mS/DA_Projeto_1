@@ -2,7 +2,9 @@
 #ifndef DA_PROJETO_1_MENU_H
 #define DA_PROJETO_1_MENU_H
 #include "Gestor.h"
-
+/**
+ * @brief Represents the menu.
+ */
 class Menu{
     /**
      * @brief A manager.
